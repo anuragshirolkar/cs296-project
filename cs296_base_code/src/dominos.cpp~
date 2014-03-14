@@ -31,7 +31,7 @@
 #else
 	#include "GL/freeglut.h"
 #endif
-#include <cstdlib>
+
 #include <cstring>
 using namespace std;
 
@@ -316,8 +316,8 @@ namespace cs296
 
 
 
-		{
-			b2BodyDef myBodyDef;
+	{
+	  b2BodyDef myBodyDef;
       myBodyDef.type = b2_staticBody;
       myBodyDef.position.Set(0, 0);
       b2Body* staticBody = m_world->CreateBody(&myBodyDef);
@@ -338,27 +338,9 @@ namespace cs296
       staticBody->CreateFixture(&myFixtureDef);
       polygonShape.SetAsBox( 1, 20, b2Vec2(20, 20), 0);//right wall
       staticBody->CreateFixture(&myFixtureDef);
-			
-		}
-		{
-			b2BodyDef plank;
-			plank.fixedRotation = true;
-			plank.type = b2_dynamicBody;
-			plank.position.Set(0,0);
-			b2Body* plankBody = m_world->CreateBody(&plank);
+	}
 
-			//shape Definition
-			b2PolygonShape plankShape;
-
-			//fixture definition
-			b2FixtureDef plankFixture;
-			plankFixture.density = 0.5f;
-			plankFixture.shape = &plankShape;
-			plankShape.SetAsBox(19, 3, b2Vec2(0,25),0);
-			plankBody->CreateFixture(&plankFixture);
-		}
-
-		{
+	{
       b2Body* spherebody;
 	
       b2CircleShape circle;
@@ -366,22 +348,20 @@ namespace cs296
 	
       b2FixtureDef ballfd;
       ballfd.shape = &circle;
-      ballfd.density = 0.3f;
+      ballfd.density = 1.0f;
       ballfd.friction = 0.0f;
-      ballfd.restitution = 1.0f;
+      ballfd.restitution = 0.0f;
 	
-      for (int i = 0; i < 50; ++i)
-			{
-				b2BodyDef ballbd;
-				ballbd.type = b2_dynamicBody;
-				ballbd.position.Set(-12.2f + i*0.5, 16.6f);
-				spherebody = m_world->CreateBody(&ballbd);
-				spherebody->CreateFixture(&ballfd);
-				spherebody->SetLinearVelocity( b2Vec2( rand()/10000000, rand()/10000000 ) );
-			}
+      for (int i = 0; i < 10; ++i)
+	  {
+		  b2BodyDef ballbd;
+		  ballbd.type = b2_dynamicBody;
+		  ballbd.position.Set(-22.2f + i*1.0, 26.6f);
+		  spherebody = m_world->CreateBody(&ballbd);
+		  spherebody->CreateFixture(&ballfd);
+	}
     }
   }
 
   sim_t *sim = new sim_t("Dominos", dominos_t::create);
 }
-
