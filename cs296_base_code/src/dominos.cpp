@@ -31,8 +31,11 @@
 #else
 	#include "GL/freeglut.h"
 #endif
+#include <iostream>
 #include <cstdlib>
 #include <cstring>
+#include <vector>
+
 using namespace std;
 
 #include "dominos.hpp"
@@ -315,7 +318,7 @@ namespace cs296
       }*/
 
 
-
+		/*
 		{
 			b2BodyDef myBodyDef;
       myBodyDef.type = b2_staticBody;
@@ -357,10 +360,9 @@ namespace cs296
 			plankShape.SetAsBox(19, 3, b2Vec2(0,25),0);
 			plankBody->CreateFixture(&plankFixture);
 		}
-
+		
 		{
-      b2Body* spherebody;
-	
+      b2Body* spherebody;;
       b2CircleShape circle;
       circle.m_radius = 0.5;
 	
@@ -374,14 +376,126 @@ namespace cs296
 			{
 				b2BodyDef ballbd;
 				ballbd.type = b2_dynamicBody;
-				ballbd.position.Set(-12.2f + i*0.5, 16.6f);
+				ballbd.position.Set(-12.2f + i*0.05, 16.6f);
 				spherebody = m_world->CreateBody(&ballbd);
 				spherebody->CreateFixture(&ballfd);
 				spherebody->SetLinearVelocity( b2Vec2( rand()/10000000, rand()/10000000 ) );
 			}
-    }
+			}*/
+
+		//FIXED PARTS OF THE ENGINE'S BODY
+		{
+						
+		  b2Body* enbd1;
+      b2PolygonShape poly1;
+      b2Vec2 vertices1[6];
+      vertices1[0].Set(9,17);
+      vertices1[1].Set(9,20);
+      vertices1[2].Set(13,23);
+      vertices1[3].Set(28,23);
+			vertices1[4].Set(32,20);
+      vertices1[5].Set(32,17);
+      poly1.Set(vertices1, 6);
+      b2FixtureDef enfd1;
+      enfd1.shape = &poly1;
+      enfd1.density = 10.0f;
+      enfd1.friction = 0.0f;
+      enfd1.restitution = 0.0f;
+      b2BodyDef enbddf1;
+      enbddf1.position.Set(0.0f, 0.0f);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			
+
+			
+      b2Vec2 vertices2[4];
+			vertices2[0].Set(13,23);
+			vertices2[1].Set(13,26);
+			vertices2[2].Set(28,26);
+			vertices2[3].Set(28,23);
+      poly1.Set(vertices2, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices3[4];
+			vertices3[0].Set(0,0);
+			vertices3[1].Set(0,26);
+			vertices3[2].Set(4,26);
+			vertices3[3].Set(4,4);
+      poly1.Set(vertices3, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices4[3];
+			vertices4[0].Set(4,23);
+			vertices4[1].Set(4,26);
+			vertices4[2].Set(8,26);
+      poly1.Set(vertices4, 3);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices5[4];
+			vertices5[0].Set(1,26);
+			vertices5[1].Set(1,29);
+			vertices5[2].Set(4,29);
+			vertices5[3].Set(4,26);
+      poly1.Set(vertices5, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices6[4];
+			vertices6[0].Set(0,0);
+			vertices6[1].Set(4,4);
+			vertices6[2].Set(37,4);
+			vertices6[3].Set(47,0);
+      poly1.Set(vertices6, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices7[4];
+			vertices7[0].Set(37,4);
+			vertices7[1].Set(37,9);
+			vertices7[2].Set(47,9);
+			vertices7[3].Set(47,0);
+      poly1.Set(vertices7, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices8[4];
+			vertices8[0].Set(37,12);
+			vertices8[1].Set(37,26);
+			vertices8[2].Set(47,26);
+			vertices8[3].Set(47,12);
+      poly1.Set(vertices8, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices9[3];
+			vertices9[0].Set(37,23);
+			vertices9[1].Set(33,26);
+			vertices9[2].Set(37,26);
+      poly1.Set(vertices9, 3);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices10[4];
+			vertices10[0].Set(37,26);
+			vertices10[1].Set(37,29);
+			vertices10[2].Set(40,29);
+			vertices10[3].Set(40,26);
+      poly1.Set(vertices10, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+			
+		}
+
+		
   }
 
   sim_t *sim = new sim_t("Dominos", dominos_t::create);
+	void dominos_t::step(settings_t* settings){
+		base_sim_t::step(settings);
+	}
 }
 

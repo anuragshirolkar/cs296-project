@@ -17,6 +17,7 @@
 */
 
 #include "cs296_base.hpp"
+#include <iostream>
 #include <cstdio>
 using namespace std;
 using namespace cs296;
