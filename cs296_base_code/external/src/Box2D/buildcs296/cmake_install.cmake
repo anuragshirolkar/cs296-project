@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D
+=======
+# Install script for directory: /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +38,11 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   INCLUDE("/home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/Box2D/cmake_install.cmake")
+=======
+  INCLUDE("/users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/Box2D/cmake_install.cmake")
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -44,7 +52,13 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
+<<<<<<< HEAD
 FILE(WRITE "/home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
   FILE(APPEND "/home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+=======
+FILE(WRITE "/users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
 ENDFOREACH(file)

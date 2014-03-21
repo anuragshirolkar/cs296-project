@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/Box2D/CMakeFiles/Box2D.dir
+=======
+/users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/Box2D/CMakeFiles/Box2D.dir
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce

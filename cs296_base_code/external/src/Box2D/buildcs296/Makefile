@@ -35,19 +35,35 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+<<<<<<< HEAD
 # The top-level source directory on which CMake was run.
 CMAKE_SOURCE_DIR = /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296
+=======
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
+# The top-level source directory on which CMake was run.
+CMAKE_SOURCE_DIR = /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
 	/usr/bin/cmake -i .
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -107,9 +123,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anuragshirolkar/Desktop/project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles 0
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
 .PHONY : all
 
 # The main clean target

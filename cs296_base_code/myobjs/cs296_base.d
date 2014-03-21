@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 /home/anuragshirolkar/Desktop/project/cs296_base_code/myobjs/cs296_base.o: \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/src/cs296_base.cpp \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/src/cs296_base.hpp \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/src/render.hpp \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Box2D.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Common/b2Settings.h \
+=======
+/users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/myobjs/cs296_base.o: \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/src/cs296_base.cpp \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/src/cs296_base.hpp \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/src/render.hpp \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Box2D.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2Settings.h \
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
  /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stddef.h /usr/include/assert.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/bits/predefs.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -11,8 +20,13 @@
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.6/include/float.h \
+<<<<<<< HEAD
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Common/b2Draw.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Common/b2Math.h \
+=======
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2Draw.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2Math.h \
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
  /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
  /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
@@ -21,11 +35,19 @@
  /usr/include/x86_64-linux-gnu/bits/mathdef.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+<<<<<<< HEAD
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Common/b2Timer.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2CircleShape.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2Shape.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Common/b2BlockAllocator.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/b2Collision.h \
+=======
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2Timer.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/Shapes/b2CircleShape.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/Shapes/b2Shape.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2BlockAllocator.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/b2Collision.h \
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
  /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -34,12 +56,21 @@
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+<<<<<<< HEAD
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2EdgeShape.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2ChainShape.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/Shapes/b2PolygonShape.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/b2BroadPhase.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/b2DynamicTree.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Common/b2GrowableStack.h \
+=======
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/Shapes/b2EdgeShape.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/Shapes/b2ChainShape.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/Shapes/b2PolygonShape.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/b2BroadPhase.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/b2DynamicTree.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2GrowableStack.h \
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
  /usr/include/memory.h /usr/include/string.h /usr/include/xlocale.h \
  /usr/include/x86_64-linux-gnu/bits/string3.h \
  /usr/include/c++/4.6/algorithm /usr/include/c++/4.6/utility \
@@ -81,15 +112,22 @@
  /usr/include/c++/4.6/bits/stl_tempbuf.h \
  /usr/include/c++/4.6/bits/stl_construct.h /usr/include/c++/4.6/new \
  /usr/include/c++/4.6/exception \
+<<<<<<< HEAD
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/b2Distance.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Collision/b2TimeOfImpact.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Dynamics/b2Body.h \
+=======
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/b2Distance.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Collision/b2TimeOfImpact.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/b2Body.h \
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
  /usr/include/c++/4.6/memory /usr/include/c++/4.6/bits/allocator.h \
  /usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++allocator.h \
  /usr/include/c++/4.6/ext/new_allocator.h \
  /usr/include/c++/4.6/bits/stl_uninitialized.h \
  /usr/include/c++/4.6/bits/stl_raw_storage_iter.h \
  /usr/include/c++/4.6/backward/auto_ptr.h \
+<<<<<<< HEAD
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Dynamics/b2Fixture.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Dynamics/b2WorldCallbacks.h \
  /home/anuragshirolkar/Desktop/project/cs296_base_code/external/include/Box2D/Dynamics/b2TimeStep.h \
@@ -156,6 +194,30 @@
  /usr/include/c++/4.6/bits/ostream.tcc /usr/include/c++/4.6/istream \
  /usr/include/c++/4.6/bits/istream.tcc /usr/include/c++/4.6/cstdio \
  /usr/include/libio.h /usr/include/_G_config.h \
+=======
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/b2Fixture.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/b2WorldCallbacks.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/b2TimeStep.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/b2World.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Common/b2StackAllocator.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/b2ContactManager.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Contacts/b2Contact.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2DistanceJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2Joint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2FrictionJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2GearJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2MotorJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2MouseJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2PrismaticJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2PulleyJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2RevoluteJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2RopeJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2WeldJoint.h \
+ /users/ug12/anuragshirolkar/Desktop/project/workspace/cs296_base_code/external/include/Box2D/Dynamics/Joints/b2WheelJoint.h \
+ /usr/include/c++/4.6/cstdio /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdarg.h \
+>>>>>>> 5efaffe435e615eb1338796bfb9fb713f20ef4ce
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/stdio2.h
