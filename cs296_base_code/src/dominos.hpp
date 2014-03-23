@@ -33,7 +33,7 @@ namespace cs296
   {
   public:
     dominos_t();
-    
+		b2Body* spherebody[10];
     static base_sim_t* create()
     {
       return new dominos_t;

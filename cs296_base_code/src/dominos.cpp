@@ -490,12 +490,62 @@ namespace cs296
 			
 		}
 
+		//PISTON AT THE BOTTOM
+		{
+			b2Body *piston1, *piston2;
+			b2PolygonShape shape;
+      shape.SetAsBox(24.0f, 1.5f);
+	
+      b2BodyDef bd;
+			bd.type = b2_dynamicBody;
+      bd.position.Set(29.0f, 10.5f);
+      piston1 = m_world->CreateBody(&bd);
+      piston1->CreateFixture(&shape, 0.1f);
+
+			shape.SetAsBox(1.5f, 6.4f);
+			bd.position.Set(7.5f, 10.5f);
+			piston2 = m_world->CreateBody(&bd);
+			piston2->CreateFixture(&shape, 0.1f);
+
+			b2WeldJointDef jd;
+			b2Vec2 anchor(7.5f, 10.5f);
+			jd.Initialize(piston1, piston2, anchor);
+			m_world->CreateJoint(&jd);
+		}
+
+
+		
+		/*
+		{
+	
+      b2CircleShape circle;
+      circle.m_radius = 0.5;
+	
+      b2FixtureDef ballfd;
+      ballfd.shape = &circle;
+      ballfd.density = 1.0f;
+      ballfd.friction = 0.0f;
+      ballfd.restitution = 0.0f;
+
+			for (int i = 0; i < 10; i++) {
+				b2BodyDef ballbd;
+				cout << "here "<<i << endl;
+				ballbd.type = b2_dynamicBody;
+				ballbd.position.Set(-22.2f+i, 26.6f);
+				spherebody[i] = m_world->CreateBody(&ballbd);
+				spherebody[i]->CreateFixture(&ballfd);
+			}
+
+			
+			}*/
 		
   }
 
   sim_t *sim = new sim_t("Dominos", dominos_t::create);
 	void dominos_t::step(settings_t* settings){
 		base_sim_t::step(settings);
+
+		
 	}
 }
 
