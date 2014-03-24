@@ -45,7 +45,7 @@ namespace cs296
   /**  The is the constructor 
    * This is the documentation block for the constructor.
    */ 
-  
+	
   dominos_t::dominos_t()
   {
     //Ground
@@ -487,6 +487,102 @@ namespace cs296
       poly1.Set(vertices10, 4);
       enbd1 = m_world->CreateBody(&enbddf1);
       enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices11[4];
+			vertices11[0].Set(1,31);
+			vertices11[1].Set(1,36);
+			vertices11[2].Set(4,36);
+			vertices11[3].Set(4,31);
+      poly1.Set(vertices11, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices12[4];
+			vertices12[0].Set(4,34);
+			vertices12[1].Set(4,44);
+			vertices12[2].Set(5,44);
+			vertices12[3].Set(5,34);
+      poly1.Set(vertices12, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices13[4];
+			vertices13[0].Set(37,31);
+			vertices13[1].Set(37,36);
+			vertices13[2].Set(40,36);
+			vertices13[3].Set(40,31);
+      poly1.Set(vertices13, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices14[4];
+			vertices14[0].Set(36,34);
+			vertices14[1].Set(36,44);
+			vertices14[2].Set(37,44);
+			vertices14[3].Set(37,34);
+      poly1.Set(vertices14, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+			
+			b2Vec2 vertices15[4];
+			vertices15[0].Set(8,34);
+			vertices15[1].Set(8,44);
+			vertices15[2].Set(9,44);
+			vertices15[3].Set(9,34);
+      poly1.Set(vertices15, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+
+			
+			b2Vec2 vertices16[4];
+			vertices16[0].Set(8,34);
+			vertices16[1].Set(8,36);
+			vertices16[2].Set(18,36);
+			vertices16[3].Set(18,34);
+      poly1.Set(vertices16, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+			
+
+			
+			b2Vec2 vertices17[4];
+			vertices17[0].Set(18,34);
+			vertices17[1].Set(18,44);
+			vertices17[2].Set(19,44);
+			vertices17[3].Set(19,34);
+      poly1.Set(vertices17, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+			
+			b2Vec2 vertices18[4];
+			vertices18[0].Set(22,34);
+			vertices18[1].Set(22,44);
+			vertices18[2].Set(23,44);
+			vertices18[3].Set(23,34);
+      poly1.Set(vertices18, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices19[4];
+			vertices19[0].Set(23,34);
+			vertices19[1].Set(23,36);
+			vertices19[2].Set(32,36);
+			vertices19[3].Set(32,34);
+      poly1.Set(vertices19, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			b2Vec2 vertices20[4];
+			vertices20[0].Set(32,34);
+			vertices20[1].Set(32,44);
+			vertices20[2].Set(33,44);
+			vertices20[3].Set(33,34);
+      poly1.Set(vertices20, 4);
+      enbd1 = m_world->CreateBody(&enbddf1);
+      enbd1->CreateFixture(&enfd1);
+
+			
 			
 		}
 
@@ -511,6 +607,39 @@ namespace cs296
 			b2Vec2 anchor(7.5f, 10.5f);
 			jd.Initialize(piston1, piston2, anchor);
 			m_world->CreateJoint(&jd);
+		}
+
+		//PISTON AT THE TOP
+		{
+			b2Body *piston1, *piston2, *piston3;
+			b2PolygonShape shape;
+      shape.SetAsBox(29.0f, 1);
+	
+      b2BodyDef bd;
+			bd.type = b2_dynamicBody;
+      bd.position.Set(18.0f, 30.0f);
+      piston1 = m_world->CreateBody(&bd);
+      piston1->CreateFixture(&shape, 0.1f);
+
+			shape.SetAsBox(1.5f, 3.9f);
+			bd.position.Set(9.5f, 30.0f);
+			piston2 = m_world->CreateBody(&bd);
+			piston2->CreateFixture(&shape, 0.1f);
+
+			b2WeldJointDef jd1;
+			b2Vec2 anchor1(9.5f, 30.0f);
+			jd1.Initialize(piston1, piston2, anchor1);
+			m_world->CreateJoint(&jd1);
+
+			shape.SetAsBox(1.5f, 3.9f);
+			bd.position.Set(26.5f, 30.0f);
+			piston3 = m_world->CreateBody(&bd);
+			piston3->CreateFixture(&shape, 0.1f);
+
+			b2WeldJointDef jd2;
+			b2Vec2 anchor2(26.5f, 30.0f);
+			jd2.Initialize(piston1, piston3, anchor2);
+			m_world->CreateJoint(&jd2);
 		}
 
 
