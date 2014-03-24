@@ -588,58 +588,75 @@ namespace cs296
 
 		//PISTON AT THE BOTTOM
 		{
-			b2Body *piston1, *piston2;
+
+			//BODY DEFINITIONS
+			b2Body *piston1, *piston2; //parts of the lower piston
+			b2Body *piston3, *piston4, *piston5; //parts of the upper piston
+			b2Body *shaft1 ,*shaft2, *shaft3, *shaft4; //four blue shafts
+			
 			b2PolygonShape shape;
+			b2FixtureDef f;
+			f.filter.groupIndex = -1;
+			f.shape = &shape;
+			f.density = 0.1f;
+			
       shape.SetAsBox(24.0f, 1.5f);
 	
       b2BodyDef bd;
 			bd.type = b2_dynamicBody;
       bd.position.Set(29.0f, 10.5f);
       piston1 = m_world->CreateBody(&bd);
-      piston1->CreateFixture(&shape, 0.1f);
+      piston1->CreateFixture(&f);
 
 			shape.SetAsBox(1.5f, 6.4f);
 			bd.position.Set(7.5f, 10.5f);
 			piston2 = m_world->CreateBody(&bd);
-			piston2->CreateFixture(&shape, 0.1f);
+			piston2->CreateFixture(&f);
 
 			b2WeldJointDef jd;
 			b2Vec2 anchor(7.5f, 10.5f);
 			jd.Initialize(piston1, piston2, anchor);
 			m_world->CreateJoint(&jd);
-		}
-
-		//PISTON AT THE TOP
-		{
-			b2Body *piston1, *piston2, *piston3;
-			b2PolygonShape shape;
+		
+			
+			
       shape.SetAsBox(29.0f, 1);
 	
-      b2BodyDef bd;
-			bd.type = b2_dynamicBody;
+      
       bd.position.Set(18.0f, 30.0f);
-      piston1 = m_world->CreateBody(&bd);
-      piston1->CreateFixture(&shape, 0.1f);
+      piston3 = m_world->CreateBody(&bd);
+      piston3->CreateFixture(&f);
 
 			shape.SetAsBox(1.5f, 3.9f);
 			bd.position.Set(9.5f, 30.0f);
-			piston2 = m_world->CreateBody(&bd);
-			piston2->CreateFixture(&shape, 0.1f);
+			piston4 = m_world->CreateBody(&bd);
+			piston4->CreateFixture(&f);
 
 			b2WeldJointDef jd1;
 			b2Vec2 anchor1(9.5f, 30.0f);
-			jd1.Initialize(piston1, piston2, anchor1);
+			jd1.Initialize(piston3, piston4, anchor1);
 			m_world->CreateJoint(&jd1);
 
 			shape.SetAsBox(1.5f, 3.9f);
 			bd.position.Set(26.5f, 30.0f);
-			piston3 = m_world->CreateBody(&bd);
-			piston3->CreateFixture(&shape, 0.1f);
+			piston5 = m_world->CreateBody(&bd);
+			piston5->CreateFixture(&f);
 
 			b2WeldJointDef jd2;
 			b2Vec2 anchor2(26.5f, 30.0f);
-			jd2.Initialize(piston1, piston3, anchor2);
+			jd2.Initialize(piston3, piston5, anchor2);
 			m_world->CreateJoint(&jd2);
+
+			bd.position.Set(62, 10.5);
+			shape.SetAsBox(10, 1.5);
+			shaft1 = m_world->CreateBody(&bd);
+			shaft1->CreateFixture(&f);
+
+			b2RevoluteJointDef rjd1;
+			b2Vec2 anchor3(52.5f, 10.5f);
+			rjd1.Initialize(piston1, shaft1, anchor3);
+			m_world->CreateJoint(&rjd1);
+
 		}
 
 
