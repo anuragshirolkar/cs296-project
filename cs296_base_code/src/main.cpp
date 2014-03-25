@@ -27,6 +27,7 @@
 #include "render.hpp"
 #include "cs296_base.hpp"
 #include "callbacks.hpp"
+#include "dominos.hpp"
 
 //! GLUI is the library used for drawing the GUI
 //! Learn more about GLUI by reading the GLUI documentation
@@ -57,6 +58,7 @@ namespace cs296
   extern int32 width;
   extern int32 height;
   extern int32 main_window;
+	
 };
 
 //! This opens up the cs296 namespace

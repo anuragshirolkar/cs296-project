@@ -247,3 +247,70 @@ void base_sim_t::step(settings_t* settings)
 	}
     }
 }
+/*
+class QueryCallback : public b2QueryCallback
+{
+public:
+	QueryCallback(const b2Vec2& point)
+	{
+		m_point = point;
+		m_fixture = NULL;
+	}
+
+	bool ReportFixture(b2Fixture* fixture)
+	{
+		b2Body* body = fixture->GetBody();
+		if (body->GetType() == b2_dynamicBody)
+		{
+			bool inside = fixture->TestPoint(m_point);
+			if (inside)
+			{
+				m_fixture = fixture;
+
+				// We are done, terminate the query.
+				return false;
+			}
+		}
+
+		// Continue the query.
+		return true;
+	}
+
+	b2Vec2 m_point;
+	b2Fixture* m_fixture;
+};
+
+void base_sim_t::mouse_down(const b2Vec2& p)
+{
+	cout <<"clicked\n";
+	m_mouseWorld = p;
+	if (m_mouseJoint != NULL)
+	{
+		return;
+	}
+	// Make a small box.
+	b2AABB aabb;
+	b2Vec2 d;
+	d.Set(0.001f, 0.001f);
+	aabb.lowerBound = p - d;
+	aabb.upperBound = p + d;
+
+	// Query the world for overlapping shapes.
+	QueryCallback callback(p);
+	m_world->QueryAABB(&callback, aabb);
+
+	if (callback.m_fixture)
+	{
+		std::cout <<"m.fixture is true\n";
+		b2Body* body = callback.m_fixture->GetBody();
+		std::cout << body->GetMass() << endl;
+		b2MouseJointDef md;
+		md.bodyA = m_ground_body;
+		md.bodyB = body;
+		md.target = p;
+		md.maxForce = 1000.0f * body->GetMass();
+		m_mouseJoint = (b2MouseJoint*)m_world->CreateJoint(&md);
+		body->SetAwake(true);
+	}
+}
+*/

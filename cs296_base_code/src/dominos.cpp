@@ -61,7 +61,7 @@ namespace cs296
       b1 = m_world->CreateBody(&bd); 
       b1->CreateFixture(&shape, 0.0f);
     }
-          
+        
     //Top horizontal shelf
     {
       b2PolygonShape shape;
@@ -588,11 +588,20 @@ namespace cs296
 
 		//PISTON AT THE BOTTOM
 		{
+			b2Body *b1;
+			b2EdgeShape gshape; 
+      gshape.Set(b2Vec2(-90.0f, 0.0f), b2Vec2(90.0f, 0.0f));
+      b2BodyDef gbd; 
+      b1 = m_world->CreateBody(&gbd); 
+      b1->CreateFixture(&gshape, 0.0f);
 
 			//BODY DEFINITIONS
-			b2Body *piston1, *piston2; //parts of the lower piston
+			/*b2Body *piston1, *piston2; //parts of the lower piston
 			b2Body *piston3, *piston4, *piston5; //parts of the upper piston
 			b2Body *shaft1 ,*shaft2, *shaft3, *shaft4; //four blue shafts
+			b2Body *wheel1, *wheel2, *wheel3; //three wheels
+			b2Body *crank1, *crank2; //two cranks
+			b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates*/
 			
 			b2PolygonShape shape;
 			b2FixtureDef f;
@@ -657,6 +666,13 @@ namespace cs296
 			rjd1.Initialize(piston1, shaft1, anchor3);
 			m_world->CreateJoint(&rjd1);
 
+			b2MouseJointDef mjd1;
+			mjd1.bodyA = b1;
+			mjd1.bodyB = piston1;
+			mjd1.target.Set(7.5f, 10.5f);
+			m_world->CreateJoint(&mjd1);
+			
+			
 		}
 
 

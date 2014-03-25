@@ -132,7 +132,7 @@ namespace cs296
     virtual void keyboard_up(unsigned char key) { B2_NOT_USED(key); }
 
     void shift_mouse_down(const b2Vec2& p) { B2_NOT_USED(p); }
-    virtual void mouse_down(const b2Vec2& p) { B2_NOT_USED(p); }
+    virtual void mouse_down(const b2Vec2& p){ B2_NOT_USED(p); }
     virtual void mouse_up(const b2Vec2& p) { B2_NOT_USED(p); }
     void mouse_move(const b2Vec2& p) { B2_NOT_USED(p); }
 
@@ -169,6 +169,10 @@ namespace cs296
     
     b2Profile m_max_profile;
     b2Profile m_total_profile;
+
+		
+		b2Vec2 m_mouseWorld;
+		b2MouseJoint* m_mouseJoint;
   };
 }
 

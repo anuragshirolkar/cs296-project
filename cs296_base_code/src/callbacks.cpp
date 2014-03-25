@@ -6,7 +6,9 @@
 
 //! These are user defined include files
 //! Included in double quotes - the path to find these has to be given at compile time
+#include <iostream>
 #include "callbacks.hpp"
+#include "dominos.hpp"
 
 #ifndef __APPLE__
 #include "GL/glui.h"
@@ -35,6 +37,8 @@ namespace cs296
   int tx, ty, tw, th;
   bool r_mouse_down;
   b2Vec2 lastp;
+
+	cs296::dominos_t *dominos;
 
   b2Vec2 callbacks_t::convert_screen_to_world(int32 x, int32 y)
   {
@@ -277,7 +281,7 @@ namespace cs296
       }
   }
   
-  
+
   
   void callbacks_t::restart_cb(int)
   {

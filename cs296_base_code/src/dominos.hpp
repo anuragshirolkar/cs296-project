@@ -32,6 +32,12 @@ namespace cs296
   class dominos_t : public base_sim_t
   {
   public:
+		b2Body *piston1, *piston2; //parts of the lower piston
+		b2Body *piston3, *piston4, *piston5; //parts of the upper piston
+		b2Body *shaft1 ,*shaft2, *shaft3, *shaft4; //four blue shafts
+		b2Body *wheel1, *wheel2, *wheel3; //three wheels
+		b2Body *crank1, *crank2; //two cranks
+		b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates
     dominos_t();
 		b2Body* spherebody[10];
     static base_sim_t* create()
