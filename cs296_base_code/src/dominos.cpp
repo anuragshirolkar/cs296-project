@@ -400,7 +400,7 @@ namespace cs296
       enfd1.shape = &poly1;
       enfd1.density = 10.0f;
       enfd1.friction = 0.0f;
-      enfd1.restitution = 0.0f;
+      enfd1.restitution = 1.0f;
       b2BodyDef enbddf1;
       enbddf1.position.Set(0.0f, 0.0f);
       enbd1 = m_world->CreateBody(&enbddf1);
@@ -595,118 +595,202 @@ namespace cs296
       b1 = m_world->CreateBody(&gbd); 
       b1->CreateFixture(&gshape, 0.0f);
 
-			//BODY DEFINITIONS
-			/*b2Body *piston1, *piston2; //parts of the lower piston
+			//BODY OBJECTS
+			b2Body *piston1, *piston2; //parts of the lower piston
 			b2Body *piston3, *piston4, *piston5; //parts of the upper piston
 			b2Body *shaft1 ,*shaft2, *shaft3, *shaft4; //four blue shafts
 			b2Body *wheel1, *wheel2, *wheel3; //three wheels
 			b2Body *crank1, *crank2; //two cranks
-			b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates*/
-			
-			b2PolygonShape shape;
-			b2FixtureDef f;
-			f.filter.groupIndex = -1;
-			f.shape = &shape;
-			f.density = 0.1f;
-			
-      shape.SetAsBox(24.0f, 1.5f);
-	
-      b2BodyDef bd;
-			bd.type = b2_dynamicBody;
-      bd.position.Set(29.0f, 10.5f);
-      piston1 = m_world->CreateBody(&bd);
-      piston1->CreateFixture(&f);
+			b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates
 
-			shape.SetAsBox(1.5f, 6.4f);
-			bd.position.Set(7.5f, 10.5f);
-			piston2 = m_world->CreateBody(&bd);
-			piston2->CreateFixture(&f);
+			//PISTONS
+			b2BodyDef pistonbd;
+		  pistonbd.type = b2_dynamicBody;
+			b2PolygonShape pistonShape;
+			b2FixtureDef pistonFixt;
+			pistonFixt.shape = &pistonShape;
+			pistonFixt.density = 0.1f;
+			pistonFixt.restitution = 1;
+			pistonFixt.filter.groupIndex = -1;
 
+			//SHAFTS
+			b2BodyDef shaftbd;
+			shaftbd.type = b2_dynamicBody;
+			b2PolygonShape shaftShape;
+			b2FixtureDef shaftFixt;
+			shaftFixt.shape = &shaftShape;
+			shaftFixt.density = 0.1f;
+			shaftFixt.filter.groupIndex = -1;
+
+			//WHEELS
+			b2BodyDef wheelbd;
+			wheelbd.type = b2_dynamicBody;
+			b2CircleShape wheelShape;
+			wheelShape.m_radius = 14;
+			b2FixtureDef wheelFixt;
+			wheelFixt.shape = &wheelShape;
+			wheelFixt.density = 0.1f;
+			wheelFixt.filter.groupIndex = -1;
+
+			//CRANKS
+			b2BodyDef crankbd;
+			crankbd.type = b2_dynamicBody;
+			b2PolygonShape crankShape;
+			b2FixtureDef crankFixt;
+			crankFixt.shape = &crankShape;
+			crankFixt.density = 0.1f;
+			crankFixt.filter.groupIndex = -1;
+
+			//FIXED POINTS
+			b2BodyDef ptbd;
+			
+		
+			//PISTON1
+      pistonShape.SetAsBox(24.0f, 1.5f);
+      pistonbd.position.Set(29.0f, 10.5f);
+      piston1 = m_world->CreateBody(&pistonbd);
+      piston1->CreateFixture(&pistonFixt);
+
+			//PISTON2
+			pistonShape.SetAsBox(2.0f, 6.4f);
+			pistonbd.position.Set(7.5f, 10.5f);
+			pistonFixt.filter.groupIndex = -2;
+			piston2 = m_world->CreateBody(&pistonbd);
+			piston2->CreateFixture(&pistonFixt);
+
+			//WELDJOINT BETWEEN PISTON1 AND PISTON2
 			b2WeldJointDef jd;
 			b2Vec2 anchor(7.5f, 10.5f);
 			jd.Initialize(piston1, piston2, anchor);
 			m_world->CreateJoint(&jd);
 		
 			
-			
-      shape.SetAsBox(29.0f, 1);
-	
-      
-      bd.position.Set(18.0f, 30.0f);
-      piston3 = m_world->CreateBody(&bd);
-      piston3->CreateFixture(&f);
+			//PISTON3
+      pistonShape.SetAsBox(29.0f, 1);
+      pistonbd.position.Set(18.0f, 30.0f);
+			pistonFixt.filter.groupIndex = -1;
+      piston3 = m_world->CreateBody(&pistonbd);
+      piston3->CreateFixture(&pistonFixt);
 
-			shape.SetAsBox(1.5f, 3.9f);
-			bd.position.Set(9.5f, 30.0f);
-			piston4 = m_world->CreateBody(&bd);
-			piston4->CreateFixture(&f);
+			//PISTON4
+			pistonShape.SetAsBox(1.5f, 3.9f);
+			pistonbd.position.Set(9.5f, 30.0f);
+			pistonFixt.filter.groupIndex = -2;
+			piston4 = m_world->CreateBody(&pistonbd);
+			piston4->CreateFixture(&pistonFixt);
 
+			//WELDJOINT BETWEEN PISTON3 AND PISTON4
 			b2WeldJointDef jd1;
 			b2Vec2 anchor1(9.5f, 30.0f);
 			jd1.Initialize(piston3, piston4, anchor1);
 			m_world->CreateJoint(&jd1);
 
-			shape.SetAsBox(1.5f, 3.9f);
-			bd.position.Set(26.5f, 30.0f);
-			piston5 = m_world->CreateBody(&bd);
-			piston5->CreateFixture(&f);
+			//PISTON5
+		  pistonShape.SetAsBox(1.5f, 3.9f);
+			pistonbd.position.Set(26.5f, 30.0f);
+			pistonFixt.filter.groupIndex = -2;
+			piston5 = m_world->CreateBody(&pistonbd);
+			piston5->CreateFixture(&pistonFixt);
 
+			//WELDJOINT BETWEEN PISTON3 AND PISTON5
 			b2WeldJointDef jd2;
 			b2Vec2 anchor2(26.5f, 30.0f);
 			jd2.Initialize(piston3, piston5, anchor2);
 			m_world->CreateJoint(&jd2);
 
-			bd.position.Set(62, 10.5);
-			shape.SetAsBox(10, 1.5);
-			shaft1 = m_world->CreateBody(&bd);
-			shaft1->CreateFixture(&f);
+			//WHEEL3
+			wheelbd.position.Set(130,10.5f);
+			wheel3 = m_world->CreateBody(&wheelbd);
+			wheel3->CreateFixture(&wheelFixt);
+
+			ptbd.position.Set(130,10.5f);
+			pt1 = m_world->CreateBody(&ptbd);
+			b2RevoluteJointDef rjd3;
+			b2Vec2 anchor5(130, 10.5f);
+			rjd3.Initialize(pt1, wheel3, anchor5);
+			m_world->CreateJoint(&rjd3);
+
+			//SHAFT1
+			shaftbd.position.Set(84.5f, 10.5f);
+			shaftShape.SetAsBox(32.5f, 1.5f);
+			shaft1 = m_world->CreateBody(&shaftbd);
+			shaft1->CreateFixture(&shaftFixt);
 
 			b2RevoluteJointDef rjd1;
 			b2Vec2 anchor3(52.5f, 10.5f);
 			rjd1.Initialize(piston1, shaft1, anchor3);
 			m_world->CreateJoint(&rjd1);
 
-			b2MouseJointDef mjd1;
-			mjd1.bodyA = b1;
-			mjd1.bodyB = piston1;
-			mjd1.target.Set(7.5f, 10.5f);
-			m_world->CreateJoint(&mjd1);
+			b2RevoluteJointDef rjd2;
+			b2Vec2 anchor4(116.5f, 10.5f);
+			rjd2.Initialize(shaft1, wheel3, anchor4);
+			m_world->CreateJoint(&rjd2);
+		
+			//SHAFT2
+			shaftbd.position.Set(0, 0);
+			b2Vec2 shaft2Vert[4];
+			shaft2Vert[0].Set(45,29);
+			shaft2Vert[1].Set(47,31);
+			shaft2Vert[2].Set(130,17);
+			shaft2Vert[3].Set(128, 15);
+      shaftShape.Set(shaft2Vert, 4);
+      shaft2 = m_world->CreateBody(&shaftbd);
+      shaft2->CreateFixture(&shaftFixt);
+			
+			b2RevoluteJointDef rjd4;
+			b2Vec2 anchor6(46.5f, 30.0f);
+			rjd4.Initialize(piston3, shaft2, anchor6);
+			m_world->CreateJoint(&rjd4);
+
+			b2RevoluteJointDef rjd6;
+			b2Vec2 anchor7(129.0f, 16.5f);
+			rjd6.Initialize(shaft2, wheel3, anchor7);
+			m_world->CreateJoint(&rjd6);
+			
 			
 			
 		}
 
 
 		
-		/*
+		
 		{
 	
       b2CircleShape circle;
-      circle.m_radius = 0.5;
+      circle.m_radius = 0.2;
 	
       b2FixtureDef ballfd;
       ballfd.shape = &circle;
-      ballfd.density = 1.0f;
+      ballfd.density = 2.0f;
       ballfd.friction = 0.0f;
-      ballfd.restitution = 0.0f;
+      ballfd.restitution = 1.0f;
+			ballfd.filter.groupIndex = -1;
 
-			for (int i = 0; i < 10; i++) {
+			for (int i = 0; i < 200; i++) {
 				b2BodyDef ballbd;
-				cout << "here "<<i << endl;
 				ballbd.type = b2_dynamicBody;
-				ballbd.position.Set(-22.2f+i, 26.6f);
+				ballbd.position.Set(rand()%3+19, rand()%5+34);
 				spherebody[i] = m_world->CreateBody(&ballbd);
 				spherebody[i]->CreateFixture(&ballfd);
+				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%200-100,-rand()%200));
 			}
 
 			
-			}*/
+			}
 		
   }
 
   sim_t *sim = new sim_t("Dominos", dominos_t::create);
 	void dominos_t::step(settings_t* settings){
 		base_sim_t::step(settings);
-
+		for(int i = 0; i < 200; i++){
+			b2Vec2 pos = spherebody[i]->GetPosition();
+			if(pos.y > 44 || pos.y < 0 || pos.x < 0 || pos.x > 50){
+				spherebody[i]->SetTransform(b2Vec2(rand()%3+19, rand()%5+34), 0);
+				//spherebody[i]->SetTransform(b2Vec2(0, 0), 0);
+				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%200-100,-rand()%200));
+			}
+		}
 		
 	}
 }

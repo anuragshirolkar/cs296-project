@@ -1,0 +1,10 @@
+* TODO PROJECT
+** TODO Anurag Shirolkar [2/6]
+	 1. [X] Creating repository
+	 2. [X] Creating static objects
+	 3. [ ] Creating dynamic objects
+	 4. [ ] Enabling movement of dynamic objects by mouse to help in debugging
+	 5. [ ] Debugging and final Calibration
+	 6. [ ] Documenting
+** TODO Deepnjan Kundu
+** TODO Syamantak Naskar
