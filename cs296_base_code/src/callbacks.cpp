@@ -28,7 +28,7 @@ namespace cs296
   cs296::sim_t* entry;
   cs296::base_sim_t* test;
   cs296::settings_t settings;
-  int32 width = 640;
+  int32 width = 1240;
   int32 height = 480;
   int32 frame_period = 16;
   int32 main_window;
