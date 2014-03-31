@@ -278,7 +278,7 @@ namespace cs296
 			pistonFixt.shape = &pistonShape;
 			pistonFixt.density = 1.0f;
 			pistonFixt.restitution = 1;
-			pistonFixt.filter.groupIndex = -1;
+			//pistonFixt.filter.groupIndex = -1;
 
 			//SHAFTS
 			b2BodyDef shaftbd;
@@ -313,12 +313,16 @@ namespace cs296
 			
 		
 			//PISTON1
+			pistonFixt.filter.categoryBits = 0x0001;
+			pistonFixt.filter.maskBits = 0xFFFF & ~0x0002;
       pistonShape.SetAsBox(24.0f, 1.5f);
       pistonbd.position.Set(29.0f, 10.5f);
       piston1 = m_world->CreateBody(&pistonbd);
       piston1->CreateFixture(&pistonFixt);
 
 			//PISTON2
+			pistonFixt.filter.categoryBits = 0x0003;
+			pistonFixt.filter.maskBits = 0xFFFF;
 			pistonShape.SetAsBox(2.0f, 6.4f);
 			pistonbd.position.Set(9.5f, 10.5f);
 			pistonFixt.restitution = 0;
@@ -338,14 +342,18 @@ namespace cs296
       pistonbd.position.Set(18.0f, 30.0f);
 			
 			pistonFixt.restitution = 1;
-			pistonFixt.filter.groupIndex = -1;
+			//pistonFixt.filter.groupIndex = -1;
+			pistonFixt.filter.categoryBits = 0x0001;
+			pistonFixt.filter.maskBits = 0xFFFF & ~0x0002;
       piston3 = m_world->CreateBody(&pistonbd);
       piston3->CreateFixture(&pistonFixt);
 
 			//PISTON4
 			pistonShape.SetAsBox(3.1f, 3.9f);
 			pistonbd.position.Set(11.2f, 30.0f);
-			pistonFixt.filter.groupIndex = -2;
+			//pistonFixt.filter.groupIndex = -2;
+			pistonFixt.filter.categoryBits = 0x0003;
+			pistonFixt.filter.maskBits = 0xFFFF;
 			piston4 = m_world->CreateBody(&pistonbd);
 			piston4->CreateFixture(&pistonFixt);
 
@@ -438,9 +446,9 @@ namespace cs296
       ballfd.density = 10.0f;
       ballfd.friction = 0.0f;
       ballfd.restitution = 0.95f;
-			ballfd.filter.groupIndex = -1;
-			//ballfd.filter.categoryBits = 0x0002;
-			//ballfd.filter.maskBits = 0x0002;
+			//ballfd.filter.groupIndex = -1;
+			ballfd.filter.categoryBits = 0x0002;
+			ballfd.filter.maskBits = 0xFFFF | ~0x0001;
 
 			for (int i = 0; i < n; i++) {
 				b2BodyDef ballbd;
