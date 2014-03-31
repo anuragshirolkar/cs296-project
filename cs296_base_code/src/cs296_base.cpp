@@ -27,7 +27,7 @@ using namespace cs296;
 base_sim_t::base_sim_t()
 {
 	b2Vec2 gravity;
-	gravity.Set(2, -2);
+	gravity.Set(0, 0);
 	m_world = new b2World(gravity);
 
 	m_text_line = 30;

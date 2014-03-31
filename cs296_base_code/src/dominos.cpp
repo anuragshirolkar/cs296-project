@@ -48,6 +48,7 @@ namespace cs296
 	
   dominos_t::dominos_t()
   {
+		n = 200;
     
 		//FIXED PARTS OF THE ENGINE'S BODY
 		{
@@ -204,8 +205,8 @@ namespace cs296
 			b2Vec2 vertices16[4];
 			vertices16[0].Set(12.2f,34);
 			vertices16[1].Set(12.2f,36);
-			vertices16[2].Set(13.4f,36);
-			vertices16[3].Set(13.4f,34);
+			vertices16[2].Set(14.4f,36);
+			vertices16[3].Set(14.4f,34);
       poly1.Set(vertices16, 4);
       enbd1 = m_world->CreateBody(&enbddf1);
       enbd1->CreateFixture(&enfd1);
@@ -213,26 +214,26 @@ namespace cs296
 
 			
 			b2Vec2 vertices17[4];
-			vertices17[0].Set(13.4f,34);
-			vertices17[1].Set(13.4f,44);
-			vertices17[2].Set(14.4f,44);
-			vertices17[3].Set(14.4f,34);
+			vertices17[0].Set(14.4f,34);
+			vertices17[1].Set(14.4f,44);
+			vertices17[2].Set(15.4f,44);
+			vertices17[3].Set(15.4f,34);
       poly1.Set(vertices17, 4);
       enbd1 = m_world->CreateBody(&enbddf1);
       enbd1->CreateFixture(&enfd1);
 			
 			b2Vec2 vertices18[4];
-			vertices18[0].Set(26.6f,34);
-			vertices18[1].Set(26.6f,44);
-			vertices18[2].Set(27.6f,44);
-			vertices18[3].Set(27.6f,34);
+			vertices18[0].Set(25.6f,34);
+			vertices18[1].Set(25.6f,44);
+			vertices18[2].Set(26.6f,44);
+			vertices18[3].Set(26.6f,34);
       poly1.Set(vertices18, 4);
       enbd1 = m_world->CreateBody(&enbddf1);
       enbd1->CreateFixture(&enfd1);
 
 			b2Vec2 vertices19[4];
-			vertices19[0].Set(27.6f,34);
-			vertices19[1].Set(27.6f,36);
+			vertices19[0].Set(26.6f,34);
+			vertices19[1].Set(26.6f,36);
 			vertices19[2].Set(28.8f,36);
 			vertices19[3].Set(28.8f,34);
       poly1.Set(vertices19, 4);
@@ -275,7 +276,7 @@ namespace cs296
 			b2PolygonShape pistonShape;
 			b2FixtureDef pistonFixt;
 			pistonFixt.shape = &pistonShape;
-			pistonFixt.density = 0.1f;
+			pistonFixt.density = 1.0f;
 			pistonFixt.restitution = 1;
 			pistonFixt.filter.groupIndex = -1;
 
@@ -295,7 +296,7 @@ namespace cs296
 			wheelShape.m_radius = 14;
 			b2FixtureDef wheelFixt;
 			wheelFixt.shape = &wheelShape;
-			wheelFixt.density = 100.0f;
+			wheelFixt.density = 20.0f;
 			wheelFixt.filter.groupIndex = -1;
 
 			//CRANKS
@@ -436,16 +437,18 @@ namespace cs296
       ballfd.shape = &circle;
       ballfd.density = 10.0f;
       ballfd.friction = 0.0f;
-      ballfd.restitution = 01.0f;
+      ballfd.restitution = 0.95f;
 			ballfd.filter.groupIndex = -1;
+			//ballfd.filter.categoryBits = 0x0002;
+			//ballfd.filter.maskBits = 0x0002;
 
-			for (int i = 0; i < 50; i++) {
+			for (int i = 0; i < n; i++) {
 				b2BodyDef ballbd;
 				ballbd.type = b2_dynamicBody;
 				ballbd.position.Set(rand()%12+15, rand()%5+34);
 				spherebody[i] = m_world->CreateBody(&ballbd);
 				spherebody[i]->CreateFixture(&ballfd);
-				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%200-140,-rand()%2000));
+				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%200-140,-rand()%200));
 			}
 
 			
@@ -457,19 +460,19 @@ namespace cs296
 	void dominos_t::step(settings_t* settings){
 		base_sim_t::step(settings);
 		
-		for(int i = 0; i < 50; i++){
+		for(int i = 0; i < n; i++){
 			b2Vec2 pos = spherebody[i]->GetPosition();
 			b2Vec2 vel = spherebody[i]->GetLinearVelocity();
 			if(pos.y > 44 || pos.y < 0 || pos.x < 0 || pos.x > 50){
 				spherebody[i]->SetTransform(b2Vec2(rand()%12+15, rand()%5+34), 0);
 				//spherebody[i]->SetTransform(b2Vec2(0, 0), 0);
-				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%200-100,-rand()%2000));
+				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%1000-500,-rand()%2000));
 			}
 			else if(pos.x > 37){
 				spherebody[i]->SetLinearVelocity(b2Vec2(-vel.x, vel.y));
 			}
-			/*else if(pos.x < 26 && pos.x>15 && pos.y > 36 and vel.y > -50)
-				spherebody[i]->SetLinearVelocity(b2Vec2(vel.x, vel.y-40));*/
+			else if(pos.x < 26 && pos.x>15 && pos.y > 36 and vel.y > -50)
+				spherebody[i]->SetLinearVelocity(b2Vec2(rand()%100-50, vel.y-40));
 		}
 		
 		

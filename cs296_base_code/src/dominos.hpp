@@ -39,7 +39,8 @@ namespace cs296
 		b2Body *crank1, *crank2; //two cranks
 		b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates
     dominos_t();
-		b2Body* spherebody[100];
+		int n;
+		b2Body* spherebody[1000];
     static base_sim_t* create()
     {
       return new dominos_t;
