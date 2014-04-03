@@ -255,12 +255,6 @@ namespace cs296
 
 		//PISTON AT THE BOTTOM
 		{
-			b2Body *b1;
-			b2EdgeShape gshape; 
-      gshape.Set(b2Vec2(-90.0f, 0.0f), b2Vec2(90.0f, 0.0f));
-      b2BodyDef gbd; 
-      b1 = m_world->CreateBody(&gbd); 
-      b1->CreateFixture(&gshape, 0.0f);
 
 			//BODY OBJECTS
 			b2Body *piston1, *piston2; //parts of the lower piston
@@ -278,7 +272,7 @@ namespace cs296
 			pistonFixt.shape = &pistonShape;
 			pistonFixt.density = 1.0f;
 			pistonFixt.restitution = 1;
-			//pistonFixt.filter.groupIndex = -1;
+			pistonFixt.filter.groupIndex = -1;
 
 			//SHAFTS
 			b2BodyDef shaftbd;
@@ -382,10 +376,10 @@ namespace cs296
 			wheel3->CreateFixture(&wheelFixt);
 
 			ptbd.position.Set(130,10.5f);
-			pt1 = m_world->CreateBody(&ptbd);
+			pt3 = m_world->CreateBody(&ptbd);
 			b2RevoluteJointDef rjd3;
 			b2Vec2 anchor5(130, 10.5f);
-			rjd3.Initialize(pt1, wheel3, anchor5);
+			rjd3.Initialize(pt3, wheel3, anchor5);
 			m_world->CreateJoint(&rjd3);
 
 			//SHAFT1
@@ -431,6 +425,55 @@ namespace cs296
 			rjd6.Initialize(shaft2, wheel3, anchor7);
 			m_world->CreateJoint(&rjd6);
 
+			//WHEEL1
+			wheelbd.position.Set(70,10.5f);
+			wheelFixt.density = 0.01f;
+			wheel1= m_world->CreateBody(&wheelbd);
+			wheel1->CreateFixture(&wheelFixt);
+
+			ptbd.position.Set(70,10.5f);
+			pt1 = m_world->CreateBody(&ptbd);
+			b2RevoluteJointDef rjd8;
+			b2Vec2 anchor8(70, 10.5f);
+			rjd8.Initialize(pt1, wheel1, anchor8);
+			m_world->CreateJoint(&rjd8);
+
+			//WHEEL2
+			wheelbd.position.Set(100,10.5f);
+			wheelFixt.density = 20.0f;
+			wheel2 = m_world->CreateBody(&wheelbd);
+			wheel2->CreateFixture(&wheelFixt);
+
+			ptbd.position.Set(100,10.5f);
+			pt2 = m_world->CreateBody(&ptbd);
+			b2RevoluteJointDef rjd7;
+			b2Vec2 anchor9(100, 10.5f);
+			rjd7.Initialize(pt2, wheel2, anchor9);
+			m_world->CreateJoint(&rjd7);
+
+			//SHAFT3 : THE SHAFT JOINING THE THREE WHEELS
+			shaftbd.position.Set(100, 2.5f);
+			shaftShape.SetAsBox(32.5f, 1.5f);
+			shaftFixt.density = 1;
+			shaftFixt.filter.groupIndex = -1;
+			shaft3 = m_world->CreateBody(&shaftbd);
+			shaft3->CreateFixture(&shaftFixt);
+			
+			b2RevoluteJointDef rjd9;
+			b2Vec2 anchor10(70, 2.5f);
+			rjd9.Initialize(shaft3, wheel1, anchor10);
+			m_world->CreateJoint(&rjd9);
+			
+			b2RevoluteJointDef rjd10;
+			b2Vec2 anchor11(100, 2.5f);
+			rjd10.Initialize(shaft3, wheel2, anchor11);
+			m_world->CreateJoint(&rjd10);
+		
+			b2RevoluteJointDef rjd11;
+			b2Vec2 anchor12(130, 2.5f);
+			rjd11.Initialize(shaft3, wheel3, anchor12);
+			m_world->CreateJoint(&rjd11);
+			
 		}
 
 
@@ -471,10 +514,9 @@ namespace cs296
 		for(int i = 0; i < n; i++){
 			b2Vec2 pos = spherebody[i]->GetPosition();
 			b2Vec2 vel = spherebody[i]->GetLinearVelocity();
-			if(pos.y > 44 || pos.y < 0 || pos.x < 0 || pos.x > 50){
+			if(pos.y > 44 || pos.y < 0 || pos.x < 0 || pos.x > 38){
 				spherebody[i]->SetTransform(b2Vec2(rand()%12+15, rand()%5+34), 0);
-				//spherebody[i]->SetTransform(b2Vec2(0, 0), 0);
-				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%1000-500,-rand()%2000));
+				spherebody[i]->SetLinearVelocity( b2Vec2(rand()%1500-750,-rand()%3000));
 			}
 			else if(pos.x > 37){
 				spherebody[i]->SetLinearVelocity(b2Vec2(-vel.x, vel.y));
