@@ -25,6 +25,7 @@ SRCDIR = $(PROJECT_ROOT)/src
 OBJDIR = $(PROJECT_ROOT)/myobjs
 BINDIR = $(PROJECT_ROOT)/mybins
 LIBDIR = $(PROJECT_ROOT)/mylibs
+DOCDIR = $(PROJECT_ROOT)/doc
 
 # Library Paths
 BOX2D_ROOT=$(EXT)
@@ -62,7 +63,7 @@ SHARED_LIB=FALSE
 
 ######################################
 
-.PHONY: all setup clean distclean
+.PHONY: all setup clean distclean doc
 
 all:setup $(OBJS) 
 setup:
@@ -141,3 +142,8 @@ clean:
 distclean:clean
 	@$(RM) -rf $(EXT_LIB)/* $(INCLUDE)/* $(EXT_SRC)/Box2D $(DOCDIR)/html
 
+doc:
+	@$(ECHO) -n "Generating Doxygen Documentation ...  "
+	@$(RM) -rf doc/html
+	@$(DOXYGEN) $(DOCDIR)/Doxyfile 2 > /dev/null
+	@$(ECHO) "Done"

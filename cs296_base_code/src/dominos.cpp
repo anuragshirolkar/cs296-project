@@ -1,20 +1,20 @@
 /*
-* Copyright (c) 2006-2009 Erin Catto http://www.box2d.org
-*
-* This software is provided 'as-is', without any express or implied
-* warranty.  In no event will the authors be held liable for any damages
-* arising from the use of this software.
-* Permission is granted to anyone to use this software for any purpose,
-* including commercial applications, and to alter it and redistribute it
-* freely, subject to the following restrictions:
-* 1. The origin of this software must not be misrepresented; you must not
-* claim that you wrote the original software. If you use this software
-* in a product, an acknowledgment in the product documentation would be
-* appreciated but is not required.
-* 2. Altered source versions must be plainly marked as such, and must not be
-* misrepresented as being the original software.
-* 3. This notice may not be removed or altered from any source distribution.
-*/
+ * Copyright (c) 2006-2009 Erin Catto http://www.box2d.org
+ *
+ * This software is provided 'as-is', without any express or implied
+ * warranty.  In no event will the authors be held liable for any damages
+ * arising from the use of this software.
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ * 1. The origin of this software must not be misrepresented; you must not
+ * claim that you wrote the original software. If you use this software
+ * in a product, an acknowledgment in the product documentation would be
+ * appreciated but is not required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
 
 /* 
  * Base code for CS 296 Software Systems Lab 
@@ -27,9 +27,9 @@
 #include "render.hpp"
 
 #ifdef __APPLE__
-	#include <GLUT/glut.h>
+#include <GLUT/glut.h>
 #else
-	#include "GL/freeglut.h"
+#include "GL/freeglut.h"
 #endif
 #include <iostream>
 #include <cstdlib>
@@ -42,20 +42,52 @@ using namespace std;
 
 namespace cs296
 {
-  /**  The is the constructor 
-   * This is the documentation block for the constructor.
-   */ 
 	
   dominos_t::dominos_t()
   {
+		/**  The is the constructor 
+		 * This is the documentation block for the constructor.
+		 */ 
+		/** \par Common details:
+		 * The constructor consits of several blocks: <br>
+		 * The Common variables and function calls in the blocks: <br>
+		 * b2BodyDef defines the body <br>
+		 * b2BodyDef has several properties attached to it:<br>
+		 * 1)type [b2_dynamicBody,b2_staticBody(default)] <br>
+		 * 2)position.Set{function sets the position of object} <br>
+		 * CreateBody creates body defined by the above point <br>
+		 * b2FixtureDef provides the fixture properties: <br>
+		 * 1)shape  <br>
+		 * 2)density <br>
+		 * 3)friction <br>
+		 * 4)restitution <br>
+		 * CreateFixture creates fixtures.Fixtures are created by initializing a fixture <br>
+		 * definition and then passing the definition to the parent body. <br> <br> <br>
+		 * 
+		 */
+		
 		n = 200;
     
 		//FIXED PARTS OF THE ENGINE'S BODY
 		{
-						
+			//ENGINE BODY
+			/*! \par Engine Body
+			 * variable name : enbd1 <br>
+			 * data type : b2Body* <br>
+			 * represents the different fixed parts of the engine or the container <br>
+			 */	
 		  b2Body* enbd1;
+
+
+			//Engine shape
+			/*! \par Engine shape
+			 * variable name : poly1 <br>
+			 * data type : b2PolygonShape <br>
+			 * The shape of this body is divided in different convex polygons <br>
+			 * The above variable denotes the shape of engine body which is used again and again for defining different convex polygons <br>
+			 */
       b2PolygonShape poly1;
-			 b2Vec2 vertices1[4];
+			b2Vec2 vertices1[4];
       vertices1[0].Set(9,17);
       vertices1[1].Set(16,26);
       vertices1[2].Set(24,26);
@@ -63,11 +95,28 @@ namespace cs296
 			//vertices1[4].Set(32,20);
       //vertices1[5].Set(32,17);
       poly1.Set(vertices1, 4);
+
+			//Engine Fixture
+			/*! \par Engine Fixture
+			 * variable name : enfd1 <br>
+			 * data type : b2FixtureDef <br>
+			 * The fixture of the engine parts <br>
+			 * Contains the definition of physical properties of the body such as friction, density and restitution <br>
+			 */
       b2FixtureDef enfd1;
       enfd1.shape = &poly1;
       enfd1.density = 10.0f;
       enfd1.friction = 0.0f;
       enfd1.restitution = 1.0f;
+
+			//Engine Body Def
+			/*! \par Engine Body Def
+			 * variable name : enbddf1 <br>
+			 * data type : b2BodyDef <br>
+			 * Body definition of engine fixed parts or container <br>
+			 * This part is static <br>
+			 * The center of the body is set at the origin <br>
+			 */
       b2BodyDef enbddf1;
       enbddf1.position.Set(0.0f, 0.0f);
       enbd1 = m_world->CreateBody(&enbddf1);
@@ -76,14 +125,14 @@ namespace cs296
 			
 
 			/*
-      b2Vec2 vertices2[4];
-			vertices2[0].Set(13,23);
-			vertices2[1].Set(13,26);
-			vertices2[2].Set(28,26);
-			vertices2[3].Set(28,23);
-      poly1.Set(vertices2, 4);
-      enbd1 = m_world->CreateBody(&enbddf1);
-      enbd1->CreateFixture(&enfd1);
+				b2Vec2 vertices2[4];
+				vertices2[0].Set(13,23);
+				vertices2[1].Set(13,26);
+				vertices2[2].Set(28,26);
+				vertices2[3].Set(28,23);
+				poly1.Set(vertices2, 4);
+				enbd1 = m_world->CreateBody(&enbddf1);
+				enbd1->CreateFixture(&enfd1);
 			*/
 			b2Vec2 vertices3[4];
 			vertices3[0].Set(0,0);
@@ -255,45 +304,93 @@ namespace cs296
 
 		//PISTON AT THE BOTTOM
 		{
-
-			//BODY OBJECTS
+			//Various Dynamic Body parts of the Engine
+			/*! \par Various Dynamic Body parts of the Engine
+			 *  declaration of different b2Body* object instances which are to be used later<br>
+			 */
+			/*/BODY OBJECTS
 			b2Body *piston1, *piston2; //parts of the lower piston
 			b2Body *piston3, *piston4, *piston5; //parts of the upper piston
 			b2Body *shaft1 ,*shaft2, *shaft3, *shaft4; //four blue shafts
 			b2Body *wheel1, *wheel2, *wheel3; //three wheels
 			b2Body *crank1, *crank2; //two cranks
-			b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates
+			b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates*/
 
-			//PISTONS
+			//Piston Body Definition
+			/*! \par Piston Body Definition
+			 * variable name : pistonbd <br>
+			 * data type : b2BodyDef <br>
+			 * Body definition of piston parts <br>
+			 * type : b2dynamicBody <br>
+			 */
 			b2BodyDef pistonbd;
 		  pistonbd.type = b2_dynamicBody;
 			b2PolygonShape pistonShape;
+
+			//Piston Fixture Definition
+			/*! \par Piston Fixture Definition
+			 * variable name : pistonFixt <br>
+			 * data type : b2FixtureDefinition <br>
+			 * Contains description of physical properties of the piston body <br>
+			 */
 			b2FixtureDef pistonFixt;
 			pistonFixt.shape = &pistonShape;
 			pistonFixt.density = 1.0f;
 			pistonFixt.restitution = 1;
 			pistonFixt.filter.groupIndex = -1;
 
-			//SHAFTS
+			//Shaft Body Definition
+			/*! \par Shaft Body Definition
+			 * variable name : shaftbd <br>
+			 * data type : b2BodyDef <br>
+			 * represents the body definition of shafts <br>
+			 * type : b2_dynamicBody <br>
+			 */
 			b2BodyDef shaftbd;
 			shaftbd.type = b2_dynamicBody;
 			b2PolygonShape shaftShape;
+
+			//Shaft Fixture Definition
+			/*! \par Shaft Fixture Definition
+			 * variable name : shaftFixt <br>
+			 * data type : b2FixtureDef <br>
+			 * describes the physical properties of the shafts i.e. their density, groupIndex, shape <br>
+			 */
 			b2FixtureDef shaftFixt;
 			shaftFixt.shape = &shaftShape;
 			shaftFixt.density = 0.1f;
 			shaftFixt.filter.groupIndex = -1;
 
-			//WHEELS
+			//Wheel Body Definition
+			/*! \par Wheel Body Definition
+			 * variable name : wheelbd <br>
+			 * data type : b2BodyDef <br>
+			 * represents the body definition of the wheels <br>
+			 * type : b2_dynamicBody <br>
+			 */
 			b2BodyDef wheelbd;
 			wheelbd.type = b2_dynamicBody;
 			b2CircleShape wheelShape;
 			wheelShape.m_radius = 14;
+
+			//Wheel Fixture Definition
+			/*! \par Wheel Fixture Definition
+			 * variable name : wheelFixt <br>
+			 * data type : b2FixtureDefinition <br>
+			 * describes the fixture of wheels i.e. their density, shape and groupIndex <br>
+			 */
 			b2FixtureDef wheelFixt;
 			wheelFixt.shape = &wheelShape;
 			wheelFixt.density = 20.0f;
 			wheelFixt.filter.groupIndex = -1;
 
-			//CRANKS
+			//Cranks Body Definition
+			/*! \par \par Cranks Body Definition
+			 * variable name : crankbd <br>
+			 * data type : b2BodyDef <br>
+			 * represents body defintion of crankshafts <br>
+			 * type : b2_dynamicBody <br>
+			 */
 			b2BodyDef crankbd;
 			crankbd.type = b2_dynamicBody;
 			b2PolygonShape crankShape;
@@ -503,7 +600,7 @@ namespace cs296
 			}
 
 			
-			}
+		}
 		
   }
 
@@ -530,4 +627,3 @@ namespace cs296
 
 	
 }
-

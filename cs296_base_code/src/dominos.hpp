@@ -31,16 +31,125 @@ namespace cs296
   //! Notice the public inheritance - why do we inherit the base_sim_t class?
   class dominos_t : public base_sim_t
   {
-  public:
-		b2Body *piston1, *piston2; //parts of the lower piston
-		b2Body *piston3, *piston4, *piston5; //parts of the upper piston
-		b2Body *shaft1 ,*shaft2, *shaft3, *shaft4; //four blue shafts
-		b2Body *wheel1, *wheel2, *wheel3; //three wheels
-		b2Body *crank1, *crank2; //two cranks
-		b2Body *pt1, *pt2, *pt3, *pt4; //fixed points around which wheels and crank rotates
-    dominos_t();
+  private:
+		//Piston1
+		/*! \par piston rod of the piston below
+		 * variable name : piston1 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *piston1;
+		//Piston body
+		/*! \par body of the piston below
+		 * variable name : piston2 <br>
+		 * data type : b2body* <br>
+		 */
+		b2body *piston2;
+		//Piston body
+		/*! \par piston rod of the piston above
+		 * variable name : piston3 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *piston3;
+		//Piston body
+		/*! \par left part of the piston above 
+		 * variable name : piston4 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *piston4;
+		//Piston body
+		/*! \par right part of the piston above
+		 * variable name : piston5 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *piston5;
+		//Piston body
+		/*! \par Shaft
+		 * variable name : shaft1 <br>
+		 * data type : b2body* <br>
+		 * Shaft that connects the piston1 and the third wheel
+		 */
+		b2Body *shaft1;
+		//Piston body
+		/*! \par Shaft
+		 * variable name : shaft2 <br>
+		 * data type : b2body* <br>
+		 * Shaft that connects the piston3 and the third wheel
+		 */
+		b2Body *shaft2;
+		//Piston body
+		/*! \par Shaft
+		 * variable name : shaft3 <br>
+		 * data type : b2body* <br>
+		 * Shaft that connects the three wheels
+		 */
+		b2Body *shaft3;
+		//Piston body
+		/*! \par First Wheel
+		 * variable name : wheel1 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *wheel1;
+		//Piston body
+		/*! \par Second Wheel
+		 * variable name : wheel2 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *wheel2;
+		//Piston body
+		/*! \par Third Wheel
+		 * variable name : wheel3 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *wheel3;
+		//Piston body
+		/*! \par Piston body
+		 * variable name : piston1, piston2 <br>
+		 * data type : b2body* <br>
+		 */
+		b2Body *crank1;
+		//Piston body
+		/*! \par Crank Shaft
+		 * variable name : crank1 <br>
+		 * data type : b2body* <br>
+		 * Crank shaft that connects 
+		 */
+		b2Body *crank2;
+		//Piston body
+		/*! \par Hinge
+		 * variable name : pt1 <br>
+		 * data type : b2body* <br>
+		 * The hinge around which the first wheel rotates
+		 */
+		b2Body *pt1;
+		//Piston body
+		/*! \par Hinge
+		 * variable name : pt2 <br>
+		 * data type : b2body* <br>
+		 * The hinge around which the second wheel rotates
+		 */
+		b2Body *pt2;
+		//Piston body
+		/*! \par Hinge
+		 * variable name : pt3 <br>
+		 * data type : b2body* <br>
+		 * The hinge around which the third wheel rotates
+		 */
+		b2Body *pt3;
+		b2Body *pt4;
+		//Piston body
+		/*! \par Number of Particles
+		 * variable name : n <br>
+		 * data type : int <br>
+		 */
 		int n;
+		//Piston body
+		/*! \par Gas Particles
+		 * variable name : spherebody <br>
+		 * data type : array of b2body <br>
+		 */
 		b2Body* spherebody[1000];
+	public:
+    dominos_t();
     static base_sim_t* create()
     {
       return new dominos_t;
