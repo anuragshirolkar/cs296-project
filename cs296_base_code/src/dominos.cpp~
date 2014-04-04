@@ -49,9 +49,6 @@ namespace cs296
 		 * This is the documentation block for the constructor.
 		 */ 
 		/** \par Common details:
-		 * This constructor is mainly concerned with the making of the <br>
-		 * engine body,fixture,pistons,gaas particles and all other significant<br>
-		 * parts of the esteam engine we have designed.<br>
 		 * The constructor consits of several blocks: <br>
 		 * The Common variables and function calls in the blocks: <br>
 		 * b2BodyDef defines the body <br>
