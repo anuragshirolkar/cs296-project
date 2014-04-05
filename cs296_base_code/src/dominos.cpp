@@ -413,11 +413,24 @@ namespace cs296
 			b2BodyDef ptbd;
 			
 		
+<<<<<<< HEAD
+			/* Initialization of body with fixture and body definition
+			 * Definition of filters for the bodies so that they collide
+			 * with only a group of bodies
+			 */
+
+			/* PISTON1
+			 * defininf filters for the pistonFixt
+			 * setting the piston as a box and setting its position
+			 * creating piston body and setting its fixture
+			 */
+=======
 			//PISTON1
 			/*! \par Piston 1 shape Definition and position setting
 			  * variable name:pistonShape; data type : b2PolygonShape ;  values : width=24.0f ,  height=1.5f  <br>
 			  * Describe the shape of the piston
 			*/
+>>>>>>> 8c348a53141144b7eb75d04433eedbf9083671f0
 			pistonFixt.filter.categoryBits = 0x0001;
 			pistonFixt.filter.maskBits = 0xFFFF & ~0x0002;
       pistonShape.SetAsBox(24.0f, 1.5f);
@@ -425,97 +438,160 @@ namespace cs296
       piston1 = m_world->CreateBody(&pistonbd);
       piston1->CreateFixture(&pistonFixt);
 
-			//PISTON2
+			/* PISTON2
+			 * defining filters for the pistonFixt
+			 * setting the piston as a box and setting its position
+			 * setting other properties such as restitution and groupIndex
+			 * creating piston body and setting its fixture
+			 */
 			pistonFixt.filter.categoryBits = 0x0003;
 			pistonFixt.filter.maskBits = 0xFFFF;
 			pistonShape.SetAsBox(2.0f, 6.4f);
 			pistonbd.position.Set(9.5f, 10.5f);
-			pistonFixt.restitution = 0;
+			pistonFixt.restitution = 1;
 			pistonFixt.filter.groupIndex = -2;
 			piston2 = m_world->CreateBody(&pistonbd);
 			piston2->CreateFixture(&pistonFixt);
 
-			//WELDJOINT BETWEEN PISTON1 AND PISTON2
+			/* WELDJOINT BETWEEN PISTON1 AND PISTON2
+			 * Definition of joint: jd
+			 * datatype : b2WeldJointDef
+			 * defining anchor : the point at which the bodies are connected
+			 * Initializing and creating the joint
+			 */
 			b2WeldJointDef jd;
 			b2Vec2 anchor(7.5f, 10.5f);
 			jd.Initialize(piston1, piston2, anchor);
 			m_world->CreateJoint(&jd);
 		
 			
-			//PISTON3
+			/* PISTON3
+			 * defining filters for the pistonFixt
+			 * setting the piston as a box and setting its position
+			 * setting other properties such as restitution
+			 * creating piston body and setting its fixture
+			 */
       pistonShape.SetAsBox(29.0f, 1);
       pistonbd.position.Set(18.0f, 30.0f);
-			
 			pistonFixt.restitution = 1;
-			//pistonFixt.filter.groupIndex = -1;
 			pistonFixt.filter.categoryBits = 0x0001;
 			pistonFixt.filter.maskBits = 0xFFFF & ~0x0002;
       piston3 = m_world->CreateBody(&pistonbd);
       piston3->CreateFixture(&pistonFixt);
 
-			//PISTON4
+			/* PISTON4
+			 * defining filters for the pistonFixt
+			 * setting the piston as a box and setting its position
+			 * creating piston body and setting its fixture
+			 */
 			pistonShape.SetAsBox(3.1f, 3.9f);
 			pistonbd.position.Set(11.2f, 30.0f);
-			//pistonFixt.filter.groupIndex = -2;
 			pistonFixt.filter.categoryBits = 0x0003;
 			pistonFixt.filter.maskBits = 0xFFFF;
 			piston4 = m_world->CreateBody(&pistonbd);
 			piston4->CreateFixture(&pistonFixt);
 
-			//WELDJOINT BETWEEN PISTON3 AND PISTON4
+			/* WELDJOINT BETWEEN PISTON3 AND PISTON4
+			 * Definition of joint: jd1
+			 * datatype : b2WeldJointDef
+			 * defining anchor : anchor1
+			 * Initializing and creating the joint
+			 */
 			b2WeldJointDef jd1;
 			b2Vec2 anchor1(11.2f, 30.0f);
 			jd1.Initialize(piston3, piston4, anchor1);
 			m_world->CreateJoint(&jd1);
 
-			//PISTON5
+			/* PISTON5
+			 * defining filters for the pistonFixt
+			 * setting the piston as a box and setting its position
+			 * setting other properties such as groupIndex
+			 * creating piston body and setting its fixture
+			 */
 		  pistonShape.SetAsBox(3.1f, 3.9f);
 			pistonbd.position.Set(26.7f, 30.0f);
 			pistonFixt.filter.groupIndex = -2;
 			piston5 = m_world->CreateBody(&pistonbd);
 			piston5->CreateFixture(&pistonFixt);
 
-			//WELDJOINT BETWEEN PISTON3 AND PISTON5
+			/* WELDJOINT BETWEEN PISTON3 AND PISTON5
+			 * Definition of joint: jd2
+			 * datatype : b2WeldJointDef
+			 * defining anchor : anchor2
+			 * Initializing and creating the joint
+			 */
 			b2WeldJointDef jd2;
 			b2Vec2 anchor2(26.7f, 30.0f);
 			jd2.Initialize(piston3, piston5, anchor2);
 			m_world->CreateJoint(&jd2);
 
-			//WHEEL3
+			/* WHEEL3
+			 * setting position of the body definition variable
+			 * creating piston body and setting its fixture
+			 */
 			wheelbd.position.Set(130,10.5f);
 			wheel3 = m_world->CreateBody(&wheelbd);
 			wheel3->CreateFixture(&wheelFixt);
 
+			/* THE HINGE AROUND WHICH THE WHEEL3 ROTATES
+			 * setting position of the body definition variable
+			 * creating piston body using body definition
+			 */
 			ptbd.position.Set(130,10.5f);
 			pt3 = m_world->CreateBody(&ptbd);
+
+			/* REVOLUTEJOINT BETWEEN WHEEL3 AND THE HINGE
+			 * Definition of joint: rjd3
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor5, the point around which the bodies rotate
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd3;
 			b2Vec2 anchor5(130, 10.5f);
 			rjd3.Initialize(pt3, wheel3, anchor5);
 			m_world->CreateJoint(&rjd3);
 
-			//SHAFT1
-			//shaftbd.position.Set(84.5f, 10.5f);
+			/* SHAFT1
+			 * Creating array of vertices : shaft1Vert
+			 * Initializing shaftShape with the array of vertices
+			 * creating piston body and setting its fixture
+			 */
 			b2Vec2 shaft1Vert[4];
-			shaft1Vert[0].Set(52,9);
-			shaft1Vert[1].Set(52,12);
-			shaft1Vert[2].Set(117,11);
+			shaft1Vert[0].Set(52,9);    //the orientation of the shaft is not exactly horizontal but a little slanted
+			shaft1Vert[1].Set(52,12);   //so that it starts rotating in the right direction when the engine starts
+			shaft1Vert[2].Set(117,11);    
 			shaft1Vert[3].Set(117, 8);
       shaftShape.Set(shaft1Vert, 4);
-			//shaftShape.SetAsBox(32.5f, 1.5f);
 			shaft1 = m_world->CreateBody(&shaftbd);
 			shaft1->CreateFixture(&shaftFixt);
 
+			/* REVOLUTEJOINT BETWEEN PISTON1 AND SHAFT1
+			 * Definition of joint: rjd1
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor3
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd1;
 			b2Vec2 anchor3(52.5f, 10.5f);
 			rjd1.Initialize(piston1, shaft1, anchor3);
 			m_world->CreateJoint(&rjd1);
 
+			/* REVOLUTEJOINT BETWEEN WHEEL3 AND SHAFT1
+			 * Definition of joint: rjd2
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor4
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd2;
 			b2Vec2 anchor4(118.5f, 9.5f);
 			rjd2.Initialize(shaft1, wheel3, anchor4);
 			m_world->CreateJoint(&rjd2);
 		
-			//SHAFT2
+			/* SHAFT2
+			 * Creating array of vertices : shaft2Vert
+			 * Initializing shaftShape with the array of vertices
+			 * creating piston body and setting its fixture
+			 */
 			shaftbd.position.Set(0, 0);
 			b2Vec2 shaft2Vert[4];
 			shaft2Vert[0].Set(45,29);
@@ -525,61 +601,126 @@ namespace cs296
       shaftShape.Set(shaft2Vert, 4);
       shaft2 = m_world->CreateBody(&shaftbd);
       shaft2->CreateFixture(&shaftFixt);
-			
+
+			/* REVOLUTEJOINT BETWEEN PISTON3 AND SHAFT2
+			 * Definition of joint: rjd4
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor6
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd4;
 			b2Vec2 anchor6(46.5f, 30.0f);
 			rjd4.Initialize(piston3, shaft2, anchor6);
 			m_world->CreateJoint(&rjd4);
 
+			/* REVOLUTEJOINT BETWEEN WHEEL3 AND SHAFT2
+			 * Definition of joint: rjd6
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor7
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd6;
 			b2Vec2 anchor7(129.0f, 14.5f);
 			rjd6.Initialize(shaft2, wheel3, anchor7);
 			m_world->CreateJoint(&rjd6);
 
-			//WHEEL1
+			/* WHEEL1
+			 * setting position of the body definition variable
+			 * setting other physical properties such as density
+			 * creating piston body and setting its fixture
+			 */
 			wheelbd.position.Set(70,10.5f);
 			wheelFixt.density = 0.01f;
 			wheel1= m_world->CreateBody(&wheelbd);
 			wheel1->CreateFixture(&wheelFixt);
 
+			/* THE HINGE AROUND WHICH THE WHEEL2 ROTATES
+			 * setting position of the body definition variable
+			 * creating piston body using body definition
+			 */
 			ptbd.position.Set(70,10.5f);
 			pt1 = m_world->CreateBody(&ptbd);
+
+			/* REVOLUTEJOINT BETWEEN WHEEL1 AND THE HINGE
+			 * Definition of joint: rjd8
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor8
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd8;
 			b2Vec2 anchor8(70, 10.5f);
 			rjd8.Initialize(pt1, wheel1, anchor8);
 			m_world->CreateJoint(&rjd8);
 
-			//WHEEL2
+			/* WHEEL2
+			 * setting position of the body definition variable
+			 * setting other physical properties such as density
+			 * creating piston body and setting its fixture
+			 */
 			wheelbd.position.Set(100,10.5f);
 			wheelFixt.density = 20.0f;
 			wheel2 = m_world->CreateBody(&wheelbd);
 			wheel2->CreateFixture(&wheelFixt);
 
+			/* THE HINGE AROUND WHICH THE WHEEL2 ROTATES
+			 * setting position of the body definition variable
+			 * creating piston body using body definition
+			 */
 			ptbd.position.Set(100,10.5f);
 			pt2 = m_world->CreateBody(&ptbd);
+
+			/* REVOLUTEJOINT BETWEEN WHEEL2 AND THE HINGE
+			 * Definition of joint: rjd7
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor9
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd7;
 			b2Vec2 anchor9(100, 10.5f);
 			rjd7.Initialize(pt2, wheel2, anchor9);
 			m_world->CreateJoint(&rjd7);
 
-			//SHAFT3 : THE SHAFT JOINING THE THREE WHEELS
+			/* SHAFT3 : THE SHAFT CONNECTING THE 3 WHEELS
+			 * setting the position of the shaft
+			 * Initialize the shape as a box and setting its dimensions
+			 * setting other properties such as density and groupIndex
+			 * creating piston body and setting its fixture
+			 */
 			shaftbd.position.Set(100, 2.5f);
 			shaftShape.SetAsBox(32.5f, 1.5f);
 			shaftFixt.density = 1;
 			shaftFixt.filter.groupIndex = -1;
 			shaft3 = m_world->CreateBody(&shaftbd);
 			shaft3->CreateFixture(&shaftFixt);
-			
+
+			/* REVOLUTEJOINT BETWEEN WHEEL1 AND SHAFT3
+			 * Definition of joint: rjd9
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor10
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd9;
 			b2Vec2 anchor10(70, 2.5f);
 			rjd9.Initialize(shaft3, wheel1, anchor10);
 			m_world->CreateJoint(&rjd9);
-			
+
+			/* REVOLUTEJOINT BETWEEN WHEEL2 AND SHAFT3
+			 * Definition of joint: rjd10
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor11
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd10;
 			b2Vec2 anchor11(100, 2.5f);
 			rjd10.Initialize(shaft3, wheel2, anchor11);
 			m_world->CreateJoint(&rjd10);
-		
+
+			/* REVOLUTEJOINT BETWEEN WHEEL3 AND SHAFT3
+			 * Definition of joint: rjd11
+			 * datatype : b2RevoluteJointDef
+			 * defining anchor : anchor12
+			 * Initializing and creating the joint
+			 */
 			b2RevoluteJointDef rjd11;
 			b2Vec2 anchor12(130, 2.5f);
 			rjd11.Initialize(shaft3, wheel3, anchor12);
@@ -591,20 +732,38 @@ namespace cs296
 		
 		
 		{
-	
+			//shape of the gas particles
+			/*! \par shape of the gas particles
+			 * variable name : circle <br>
+			 * data type : b2CircleShape <br>
+			 * gas particles' shape is a circle with radius 0.2 <br>
+			 */
       b2CircleShape circle;
       circle.m_radius = 0.2f;
-	
+
+			//Fixture Of the Gas Particles
+			/*! \par Fixture Of the Gas Particles
+			 * variable name : ballfd <br>
+			 * data type : b2FixtureDef <br>
+			 * setting shape, density, friction and restitution <br>
+			 * setting appropriate filters so that they don't collide with horizontal piston rods <br>
+			 */
       b2FixtureDef ballfd;
       ballfd.shape = &circle;
       ballfd.density = 10.0f;
       ballfd.friction = 0.0f;
       ballfd.restitution = 0.95f;
-			//ballfd.filter.groupIndex = -1;
 			ballfd.filter.categoryBits = 0x0002;
 			ballfd.filter.maskBits = 0xFFFF | ~0x0001;
 
 			for (int i = 0; i < n; i++) {
+				//Body Definition
+				/*! \par Body Definition
+				 * variable name : ballbd <br>
+				 * data type : b2BodyDef <br>
+				 * setting type as dynamic body <br>
+				 * setting its position <br>
+				 */
 				b2BodyDef ballbd;
 				ballbd.type = b2_dynamicBody;
 				ballbd.position.Set(rand()%12+15, rand()%5+34);
@@ -619,6 +778,14 @@ namespace cs296
   }
 
   sim_t *sim = new sim_t("Dominos", dominos_t::create);
+	//Step Function
+	/*! \par Step Function
+	 * function name : step <br>
+	 * parameters: settings_t* <br>
+	 * This function is called at step of the animation <br>
+	 * In this function whenever a particle goes out of the engine body <br>
+	 * it is replaced inside the intake pipe
+	 */
 	void dominos_t::step(settings_t* settings){
 		base_sim_t::step(settings);
 		
