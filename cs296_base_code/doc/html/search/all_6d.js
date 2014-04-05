@@ -3,8 +3,6 @@ var searchData=
   ['m_5fdebug_5fdraw',['m_debug_draw',['../classcs296_1_1base__sim__t.html#a33766aa4f03ede7059cec3d15c006176',1,'cs296::base_sim_t']]],
   ['m_5fground_5fbody',['m_ground_body',['../classcs296_1_1base__sim__t.html#ad491071d0fed9cf49c906b1bb7a9b071',1,'cs296::base_sim_t']]],
   ['m_5fmax_5fprofile',['m_max_profile',['../classcs296_1_1base__sim__t.html#a2756934de9a43409837a17833f083c2f',1,'cs296::base_sim_t']]],
-  ['m_5fmousejoint',['m_mouseJoint',['../classcs296_1_1base__sim__t.html#a417e2a3356c2dc1ecf099c78c5440c3b',1,'cs296::base_sim_t']]],
-  ['m_5fmouseworld',['m_mouseWorld',['../classcs296_1_1base__sim__t.html#a7f9400ed7ef46b2c8cb7decaa0359bc6',1,'cs296::base_sim_t']]],
   ['m_5fpoint_5fcount',['m_point_count',['../classcs296_1_1base__sim__t.html#aab3908acf0ba494df49cc9c1566ef931',1,'cs296::base_sim_t']]],
   ['m_5fpoints',['m_points',['../classcs296_1_1base__sim__t.html#a96d1d1d7a14ce073df58e61e0b68ca16',1,'cs296::base_sim_t']]],
   ['m_5fstep_5fcount',['m_step_count',['../classcs296_1_1base__sim__t.html#a3b921022c1b0c34bd1dfb2f53be6ba10',1,'cs296::base_sim_t']]],

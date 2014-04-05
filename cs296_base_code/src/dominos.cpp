@@ -413,7 +413,6 @@ namespace cs296
 			b2BodyDef ptbd;
 			
 		
-<<<<<<< HEAD
 			/* Initialization of body with fixture and body definition
 			 * Definition of filters for the bodies so that they collide
 			 * with only a group of bodies
@@ -424,13 +423,11 @@ namespace cs296
 			 * setting the piston as a box and setting its position
 			 * creating piston body and setting its fixture
 			 */
-=======
 			//PISTON1
 			/*! \par Piston 1 shape Definition and position setting
 			  * variable name:pistonShape; data type : b2PolygonShape ;  values : width=24.0f ,  height=1.5f  <br>
 			  * Describe the shape of the piston
 			*/
->>>>>>> 8c348a53141144b7eb75d04433eedbf9083671f0
 			pistonFixt.filter.categoryBits = 0x0001;
 			pistonFixt.filter.maskBits = 0xFFFF & ~0x0002;
       pistonShape.SetAsBox(24.0f, 1.5f);

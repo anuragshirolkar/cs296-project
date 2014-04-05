@@ -7,7 +7,7 @@ var classcs296_1_1dominos__t =
     [ "crank2", "classcs296_1_1dominos__t.html#adb67ff7320d83eea9018434e53b0f344", null ],
     [ "n", "classcs296_1_1dominos__t.html#a127f654ce1af1a1e237ad15180f6c471", null ],
     [ "piston1", "classcs296_1_1dominos__t.html#a727992041fbf904b0621be9e10af2ddc", null ],
-    [ "piston2", "classcs296_1_1dominos__t.html#a32ea6eb115b860e43cdde95255b79f41", null ],
+    [ "piston2", "classcs296_1_1dominos__t.html#ac012a1701ef1d47296876dfdc63ddd99", null ],
     [ "piston3", "classcs296_1_1dominos__t.html#a4c293c2aa7f17dccb58ab30cd235b5a2", null ],
     [ "piston4", "classcs296_1_1dominos__t.html#ac9b35864a8a610fb91ff37792d38c566", null ],
     [ "piston5", "classcs296_1_1dominos__t.html#a44bbdadee0dfd5f212761a567f341e09", null ],
