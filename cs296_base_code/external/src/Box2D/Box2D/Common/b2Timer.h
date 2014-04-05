@@ -21,6 +21,10 @@
 
 #include <Box2D/Common/b2Settings.h>
 
+#if defined(__linux__) || defined (__APPLE__)
+#include <sys/time.h>
+#endif
+
 /// Timer for profiling. This has platform specific code and may
 /// not work on every platform.
 class b2Timer
@@ -44,6 +48,7 @@ private:
 #elif defined(__linux__) || defined (__APPLE__)
 	unsigned long m_start_sec;
 	unsigned long m_start_usec;
+	timeval m_start;
 #endif
 };
 

@@ -403,10 +403,21 @@ namespace cs296
 			crankFixt.filter.groupIndex = -1;
 
 			//FIXED POINTS
+			//Fixed points Definition
+			/*! \par Fixed points Body Definition
+			 * variable name : ptbd <br>
+			 * data type : b2BodyDef <br>
+			 * represents body defintion of fixed points <br>
+			 * type : b2_dynamicBody <br>
+			 */
 			b2BodyDef ptbd;
 			
 		
 			//PISTON1
+			/*! \par Piston 1 shape Definition and position setting
+			  * variable name:pistonShape; data type : b2PolygonShape ;  values : width=24.0f ,  height=1.5f  <br>
+			  * Describe the shape of the piston
+			*/
 			pistonFixt.filter.categoryBits = 0x0001;
 			pistonFixt.filter.maskBits = 0xFFFF & ~0x0002;
       pistonShape.SetAsBox(24.0f, 1.5f);
