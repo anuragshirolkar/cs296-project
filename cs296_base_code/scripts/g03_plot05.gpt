@@ -1,0 +1,24 @@
+set datafile separator ','
+unset grid
+set output "| head -n -2 > ../data/hist.temp"
+set table
+plot "../data/g03_lab05data_random.csv" u 1:3 smooth unique
+unset table
+unset output
+set output "| head -n -2 >../data/hist1.temp"
+set table
+plot "../data/g03_lab05data_02.csv" u 1:3 smooth unique
+unset table
+unset output
+set xlabel 'iteration values'
+set ylabel 'step time'
+f1(x) = a*x + b
+f2(x) = c*x + d
+set datafile separator ' '
+fit f1(x) '../data/hist.temp' using 1:3 via a,b
+fit f2(x) '../data/hist1.temp' using 1:3 via c,d
+set term png
+set output "../plots/g03_plot05.png"
+plot '../data/hist.temp' using 1:2 title "points in g03_lab05data_random.csv" , f1(x) lw 3 title "best fit line 1", '../data/hist1.temp' using 1:2 title "points in g03_lab05data_02.csv", f2(x) lw 3 title "best fit line 2"
+unset output
+set term wxt

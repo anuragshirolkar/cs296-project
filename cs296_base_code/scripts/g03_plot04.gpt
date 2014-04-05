@@ -1,0 +1,12 @@
+set datafile separator ','
+set boxwidth 0.1
+set title 'graph 04'
+set xlabel 'time steps'
+set ylabel 'frequency'
+binwidth = 0.1
+bin(x) = binwidth*floor(x/binwidth)+binwidth/2
+set term png
+set output "../plots/g03_plot04.png"
+plot "<(sed -n '2401,2550p' ../data/g03_lab05data_02.csv)" using (bin($3)):(1) smooth freq with boxes title 'single iteration', "<(sed -n '2401,2550p' ../data/g03_lab05data_02.csv)" using (bin($3)):(1) s cumul t 'smooth cumulative'
+unset output
+set term wxt

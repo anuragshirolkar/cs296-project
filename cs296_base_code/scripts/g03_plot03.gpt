@@ -1,0 +1,11 @@
+`bash helper.sh`
+set datafile separator ','
+set title 'step time graph with errorbars'
+set xlabel 'iteration values'
+set ylabel 'step times'
+set term png
+set output '../plots/g03_plot03.png'
+plot 'temp.csv' using  1:2:3 with lines title 'step time','temp.csv' using  1:2:3 with errorbars title 'errorbars'
+unset output
+set term wxt
+`rm temp.csv`
