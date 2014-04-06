@@ -27,7 +27,8 @@
 #include "render.hpp"
 #include "cs296_base.hpp"
 #include "callbacks.hpp"
-#include "dominos.hpp"
+#include <string>
+#include <sstream>
 
 //! GLUI is the library used for drawing the GUI
 //! Learn more about GLUI by reading the GLUI documentation
@@ -37,13 +38,13 @@
 #else
 #include "GL/glui.h"
 #endif
-
 //! These are standard include files
 //! These are usually available at standard system paths like /usr/include
 //! Read about the use of include files in C++
 #include <cstdio>
-
-
+#include<iostream>
+#include<sys/time.h>
+using namespace std;
 //! Notice the use of extern. Why is it used here?
 namespace cs296
 {
@@ -58,7 +59,6 @@ namespace cs296
   extern int32 width;
   extern int32 height;
   extern int32 main_window;
-	
 };
 
 //! This opens up the cs296 namespace
@@ -124,7 +124,7 @@ int main(int argc, char** argv)
   test = entry->create_fcn();
 
   //! This initializes GLUT
-  glutInit(&argc, argv);
+ /*  glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
   glutInitWindowSize(width, height);
 
@@ -148,7 +148,33 @@ int main(int argc, char** argv)
   create_glui_ui();
 
   //! Enter the infinite GLUT event loop
-  glutMainLoop();
   
-  return 0;
+  glutMainLoop();*/
+  
+  float ans=0,ans1=0,ans2=0,ans3=0;
+  settings_t* settings=new settings_t;
+  int iter;
+  istringstream (argv[1]) >> iter;
+  
+
+  timeval t1,t2;
+  gettimeofday(&t1,NULL);
+  
+  for(int i=0;i<iter;i++){
+	   test->step(settings); 
+	   const b2World* my_world=test->get_world(); 
+	   const b2Profile& my_profile = my_world->GetProfile(); 
+	   ans+=my_profile.step;
+	   ans1+=my_profile.collide;
+	   ans2+=my_profile.solveVelocity;
+	   ans3+=my_profile.solvePosition;
+  } 
+  gettimeofday(&t2,NULL);
+  
+  printf("Number of iterations: %i\n",iter);
+ printf("Average time per step is %.4f ms\n",ans/iter); 
+  printf("Average time for collision is %.4f ms\n",ans1/iter);
+  printf("Average time for velocity updates is %.4f ms\n",ans2/iter);
+  printf("Average time for position updates is %.4f ms\n\n",ans3/iter);
+  printf("Total loop time is %.4f ms\n",(t2.tv_sec-t1.tv_sec)*1000.0+(t2.tv_usec-t1.tv_usec)/1000.0);
 }

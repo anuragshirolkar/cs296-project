@@ -28,16 +28,16 @@ The CXX compiler identification is GNU, found in "/home/deepanjan/cs296-project/
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2862783651/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3196637522/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2862783651.dir/build.make CMakeFiles/cmTryCompileExec2862783651.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3196637522.dir/build.make CMakeFiles/cmTryCompileExec3196637522.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2862783651.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2862783651.dir/testCCompiler.c.o   -c /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec2862783651
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2862783651.dir/link.txt --verbose=1
-/usr/bin/cc         CMakeFiles/cmTryCompileExec2862783651.dir/testCCompiler.c.o  -o cmTryCompileExec2862783651 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3196637522.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3196637522.dir/testCCompiler.c.o   -c /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3196637522
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3196637522.dir/link.txt --verbose=1
+/usr/bin/cc         CMakeFiles/cmTryCompileExec3196637522.dir/testCCompiler.c.o  -o cmTryCompileExec3196637522 -rdynamic 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -45,16 +45,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2573007856/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec1946479802/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2573007856.dir/build.make CMakeFiles/cmTryCompileExec2573007856.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1946479802.dir/build.make CMakeFiles/cmTryCompileExec1946479802.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec2573007856
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2573007856.dir/link.txt --verbose=1
-/usr/bin/cc       -v CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2573007856 -rdynamic  
+Building C object CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec1946479802
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1946479802.dir/link.txt --verbose=1
+/usr/bin/cc       -v CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1946479802 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -64,8 +64,8 @@ Thread model: posix
 gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu9) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2573007856' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2573007856 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1946479802' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1946479802 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -74,16 +74,16 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2573007856/fast"]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1946479802/fast"]
   ignore line: [make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2573007856.dir/build.make CMakeFiles/cmTryCompileExec2573007856.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1946479802.dir/build.make CMakeFiles/cmTryCompileExec1946479802.dir/build]
   ignore line: [make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec2573007856]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2573007856.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2573007856 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec1946479802]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1946479802.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1946479802 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -93,8 +93,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu9) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2573007856' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2573007856 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1946479802' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1946479802 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2573007856] ==> ignore
+    arg [cmTryCompileExec1946479802] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -120,7 +120,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2573007856.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec1946479802.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -152,16 +152,16 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1491112964/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec676834636/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1491112964.dir/build.make CMakeFiles/cmTryCompileExec1491112964.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec676834636.dir/build.make CMakeFiles/cmTryCompileExec676834636.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1491112964.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1491112964.dir/testCXXCompiler.cxx.o -c /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec1491112964
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1491112964.dir/link.txt --verbose=1
-/usr/bin/c++          CMakeFiles/cmTryCompileExec1491112964.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1491112964 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec676834636.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec676834636.dir/testCXXCompiler.cxx.o -c /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec676834636
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec676834636.dir/link.txt --verbose=1
+/usr/bin/c++          CMakeFiles/cmTryCompileExec676834636.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec676834636 -rdynamic 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -169,16 +169,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2623943754/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec4240776032/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2623943754.dir/build.make CMakeFiles/cmTryCompileExec2623943754.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4240776032.dir/build.make CMakeFiles/cmTryCompileExec4240776032.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec2623943754
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2623943754.dir/link.txt --verbose=1
-/usr/bin/c++        -v CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2623943754 -rdynamic  
+Building CXX object CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec4240776032
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4240776032.dir/link.txt --verbose=1
+/usr/bin/c++        -v CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec4240776032 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -188,8 +188,8 @@ Thread model: posix
 gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu9) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2623943754' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2623943754 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4240776032' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec4240776032 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -198,16 +198,16 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2623943754/fast"]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec4240776032/fast"]
   ignore line: [make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2623943754.dir/build.make CMakeFiles/cmTryCompileExec2623943754.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec4240776032.dir/build.make CMakeFiles/cmTryCompileExec4240776032.dir/build]
   ignore line: [make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec2623943754]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2623943754.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2623943754 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec4240776032]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4240776032.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec4240776032 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -217,8 +217,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu9) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2623943754' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2623943754 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4240776032' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec4240776032 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -232,7 +232,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2623943754] ==> ignore
+    arg [cmTryCompileExec4240776032] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -244,7 +244,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2623943754.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec4240776032.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -274,16 +274,16 @@ Parsed CXX implicit link information from above output:
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2950898679/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec2807521625/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2950898679.dir/build.make CMakeFiles/cmTryCompileExec2950898679.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2807521625.dir/build.make CMakeFiles/cmTryCompileExec2807521625.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2950898679.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec2950898679.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2950898679
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2950898679.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec2950898679.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2950898679 -rdynamic -lX11 -lXext 
+Building C object CMakeFiles/cmTryCompileExec2807521625.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec2807521625.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2807521625
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2807521625.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec2807521625.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2807521625 -rdynamic -lX11 -lXext 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -291,16 +291,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2952470512/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec2824674857/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2952470512.dir/build.make CMakeFiles/cmTryCompileExec2952470512.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2824674857.dir/build.make CMakeFiles/cmTryCompileExec2824674857.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2952470512.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2952470512.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2952470512
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2952470512.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2952470512.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2952470512 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2824674857.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2824674857.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2824674857
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2824674857.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2824674857.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2824674857 -rdynamic 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -308,16 +308,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1393104819/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3320888109/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1393104819.dir/build.make CMakeFiles/cmTryCompileExec1393104819.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3320888109.dir/build.make CMakeFiles/cmTryCompileExec3320888109.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1393104819.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec1393104819.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1393104819
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1393104819.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec1393104819.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1393104819 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3320888109.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3320888109.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3320888109
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3320888109.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3320888109.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3320888109 -rdynamic 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -325,16 +325,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2857009168/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec538934813/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2857009168.dir/build.make CMakeFiles/cmTryCompileExec2857009168.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec538934813.dir/build.make CMakeFiles/cmTryCompileExec538934813.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2857009168.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec2857009168.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2857009168
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2857009168.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec2857009168.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2857009168 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec538934813.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec538934813.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec538934813
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec538934813.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec538934813.dir/CheckFunctionExists.c.o  -o cmTryCompileExec538934813 -rdynamic 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -342,16 +342,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2296319220/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec123705784/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2296319220.dir/build.make CMakeFiles/cmTryCompileExec2296319220.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec123705784.dir/build.make CMakeFiles/cmTryCompileExec123705784.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2296319220.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2296319220.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2296319220
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2296319220.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2296319220.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2296319220 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec123705784.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec123705784.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec123705784
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec123705784.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec123705784.dir/CheckFunctionExists.c.o  -o cmTryCompileExec123705784 -rdynamic 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
@@ -359,16 +359,16 @@ make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/extern
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1023415740/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec575362419/fast"
 make[1]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1023415740.dir/build.make CMakeFiles/cmTryCompileExec1023415740.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec575362419.dir/build.make CMakeFiles/cmTryCompileExec575362419.dir/build
 make[2]: Entering directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1023415740.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1023415740.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1023415740
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1023415740.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1023415740.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1023415740 -rdynamic -lICE 
+Building C object CMakeFiles/cmTryCompileExec575362419.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec575362419.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec575362419
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec575362419.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec575362419.dir/CheckFunctionExists.c.o  -o cmTryCompileExec575362419 -rdynamic -lICE 
 make[2]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 make[1]: Leaving directory `/home/deepanjan/cs296-project/cs296_base_code/external/src/Box2D/buildcs296/CMakeFiles/CMakeTmp'
 
