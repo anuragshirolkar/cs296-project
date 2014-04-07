@@ -242,6 +242,7 @@ distclean1:clean
 report:
 	@cd $(DOCDIR);\
 	pdflatex $(TEX)
+	@python3 scripts/g03_gen_html.py
 	
 
 doc:
@@ -251,23 +252,18 @@ doc:
 	@$(ECHO) "Done"
 data:all
 	@mkdir -p data
-	@$(SH) $(SCR)/g03_gen_data.sh
-	@$(SH) $(SCR)/g03_gen_csv.sh
-	@$(SH) $(SCR)/g03_gen_data_csv.sh
-	@$(SH) $(SCR)/g03_gen_data_random.sh
-plot:
+	@if [ ! -f "mybins/cs296_03_exe" ] ; \
+		then make exe;\
+	fi;
+	@$(ECHO) "Generating csv files..."
+	@python3 scripts/g03_gen_csv.py
+	
+	
+
+plot:   data
 	@mkdir -p plots
-	@echo "done"
-	@cd $(SCR);\
-	gnuplot $(SCR)/g03_plot01.gpt;\
-	gnuplot $(SCR)/g03_plot02.gpt;\
-	gnuplot $(SCR)/g03_plot03.gpt;\
-	gnuplot $(SCR)/g03_plot04.gpt;\
-	gnuplot $(SCR)/g03_plot05.gpt;
-	@rm $(DAT)/hist.temp
-	@rm  $(DAT)/hist1.temp
-	@rm -rf  $(SCR)/fit.log
-	@rm -rf $(SCR)/temp.csv
+	@$(ECHO) "Generating plots..."
+	@python3 scripts/g03_gen_plots.py
 
 debug_prof: setup_d $(OBJS_D) exe_d
 	@perf record -g -- mybins/cs296_03_exe 10000
