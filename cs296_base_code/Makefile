@@ -270,11 +270,13 @@ plot:
 	@rm -rf $(SCR)/temp.csv
 
 debug_prof: setup_d $(OBJS_D) exe_d
-	@perf record -g -- mybins/cs296_03_exe 10000
+	@perf record -g -- mybins/cs296_03_exe 100
+	@perf script | python3 gprof2dot.py -f perf | dot -Tpng -o output_d.png
 	@mv perf.data g03_debug_prof.dat 
 
 
 release_prof: setup_r $(OBJS_R) exe_r
-	@perf record -g -- mybins/cs296_03_exe 10000
+	@perf record -g -- mybins/cs296_03_exe 100
+	@perf script | python3 gprof2dot.py -f perf | dot -Tpng -o output_r.png
 	@mv perf.data g03_release_prof.dat
 	
