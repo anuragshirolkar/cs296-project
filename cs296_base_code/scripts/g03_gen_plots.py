@@ -7,7 +7,7 @@ from matplotlib.font_manager import FontProperties
    Reading CSV Data
 #############################################################################'''
 
-max_reruns=50
+max_reruns=10
 max_rand_reruns=5
 
 datafile = open('./data/g03_data.csv', 'r')

@@ -67,8 +67,8 @@ OBJS_D := $(OBJS)
 #shared_lib bool variable
 SHARED_LIB=FALSE
 
-REPORT = $(DOCDIR)/g03_prof_report
-TEX = g03_prof_report
+REPORT = $(DOCDIR)/g03_report
+TEX = g03_report
 
 ######################################
 
@@ -227,7 +227,7 @@ dynamic:
 
 clean:
 	@$(ECHO) -n "Cleaning up..."
-	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ my* $(DOCDIR)/html $(REPORT).aux  $(REPORT).pdf $(REPORT).bbl $(REPORT).blg $(REPORT).dvi $(REPORT).log  $(DAT) $(PLOTS)
+	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ my* $(DOCDIR)/html $(REPORT).aux  $(REPORT).pdf $(REPORT).bbl $(REPORT).blg $(REPORT).dvi $(REPORT).log  $(DAT) 
 	@$(ECHO) "Done"
 
 cleandat:
@@ -241,7 +241,7 @@ distclean1:clean
 
 report:
 	@cd $(DOCDIR);\
-	pdflatex $(TEX)
+	pdflatex g03_report;
 	@python3 scripts/g03_gen_html.py
 	
 
@@ -266,9 +266,9 @@ plot:   data
 	@python3 scripts/g03_gen_plots.py
 
 debug_prof: setup_d $(OBJS_D) exe_d
-	@perf record -g -- mybins/cs296_03_exe 100
-	@perf script | python3 gprof2dot.py -f perf | dot -Tpng -o output_d.png
-	@mv perf.data g03_debug_prof.dat 
+	@perf record -o g03_debug_prof.dat -g -- mybins/cs296_03_exe 100
+	@perf script -i g03_debug_prof.dat| python3.3 gprof2dot.py -f perf | dot -Tpng -o output_d.png
+	@#mv perf.data g03_debug_prof.dat 
 
 
 release_prof: setup_r $(OBJS_R) exe_r

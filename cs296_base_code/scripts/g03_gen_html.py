@@ -1,7 +1,7 @@
 import sys
 import re
-f=open('./doc/g03_prof_report.tex')
-f1=open('./doc/g03_lab09_report.html','w')
+f=open('./doc/g03_report.tex')
+f1=open('./doc/g03_project_report.html','w')
 a=f.read()
 ans=""
 ans+="<!DOCTYPE html>"
@@ -10,6 +10,7 @@ ans+="<html><title>CS296 Report - G03</title>"
 
 
 req=re.findall(r'\\section{TIMING}.*\\section{PROFILING}',a,re.DOTALL)
+print(req)
 req=re.sub(r'(\\section{PROFILING})', r'', req[0])
 req=re.sub(r'(\\section{)(.*)(})', r'<h1>\2</h1><p>', req)
 req=re.sub(r'(\\subsection{)(.*)(})', r'</p><h2>\2</h2><p>', req)

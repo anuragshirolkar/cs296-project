@@ -170,6 +170,10 @@ int main(int argc, char** argv)
 	   ans3+=my_profile.solvePosition;
   } 
   gettimeofday(&t2,NULL);
+  if(ans/iter>10000)ans=0;
+  if(ans1/iter>10000)ans1=0;
+  if(ans2/iter>10000)ans2=0;
+  if(ans3/iter>10000)ans3=0;
   
   printf("Number of iterations: %i\n",iter);
  printf("Average time per step is %.4f ms\n",ans/iter); 

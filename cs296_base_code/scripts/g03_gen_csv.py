@@ -7,7 +7,7 @@ import random
 f=open('./data/g03_data.csv','w')
 f1=open('./data/g03_data_rand.csv','w')
 c1=500
-c2=50
+c2=10
 for i in range(1,c1+1):
 	for j in range (1,c2+1):
 		call=['./mybins/cs296_03_exe',str(i)]
@@ -17,10 +17,11 @@ for i in range(1,c1+1):
 		req = re.findall(r'[0-9]+(?:[.][0-9]+)?', fin)
 		f.write(req[0]+','+str(j)+','+req[1]+','+req[2]+','+req[3]+','+req[4]+','+req[5]+'\n')
 f.close()
-f=open('./lab09_g03_data.csv')
+f=open('./data/g03_data.csv')
 reader=csv.reader(f, delimiter=',')
 a=[]
 c_rand=5
+
 for i in range(1,c1+1):
 	b=random.sample(range(1,c2+1),c_rand)
 	for k in range (c_rand):
