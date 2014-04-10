@@ -124,7 +124,7 @@ int main(int argc, char** argv)
   test = entry->create_fcn();
 
   //! This initializes GLUT
- /*  glutInit(&argc, argv);
+   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
   glutInitWindowSize(width, height);
 
@@ -149,14 +149,14 @@ int main(int argc, char** argv)
 
   //! Enter the infinite GLUT event loop
   
-  glutMainLoop();*/
+  glutMainLoop();
   
   float ans=0,ans1=0,ans2=0,ans3=0;
   settings_t* settings=new settings_t;
   int iter;
   istringstream (argv[1]) >> iter;
   
-
+	/*
   timeval t1,t2;
   gettimeofday(&t1,NULL);
   
@@ -180,5 +180,5 @@ int main(int argc, char** argv)
   printf("Average time for collision is %.4f ms\n",ans1/iter);
   printf("Average time for velocity updates is %.4f ms\n",ans2/iter);
   printf("Average time for position updates is %.4f ms\n\n",ans3/iter);
-  printf("Total loop time is %.4f ms\n",(t2.tv_sec-t1.tv_sec)*1000.0+(t2.tv_usec-t1.tv_usec)/1000.0);
+  printf("Total loop time is %.4f ms\n",(t2.tv_sec-t1.tv_sec)*1000.0+(t2.tv_usec-t1.tv_usec)/1000.0);*/
 }

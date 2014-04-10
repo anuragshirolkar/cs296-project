@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{man}
+Box2d manual.
+\newblock \url{http://www.box2d.org/manual.html}.
+
+\bibitem{iforce2d}
+iforce2d box2d tutorials.
+\newblock \url{http://www.iforce2d.net/b2dtut/}.
+
+\bibitem{stackexchange}
+Jeff Atwood and Joel Spolsky.
+\newblock Stackexchange.com.
+\newblock \url{http://tex.stackexchange.com}.
+
+\bibitem{halliday}
+David Halliday, Robert Resnick, and Jearl Walker.
+\newblock {\em Fundamentals of Physics}.
+\newblock John Wiley \& Sons, Inc., 1960.
+
+\bibitem{wiki}
+Jimmy Wales.
+\newblock Wikipedia.
+\newblock \url{http://www.wikipedia.org}.
+
+\end{thebibliography}
