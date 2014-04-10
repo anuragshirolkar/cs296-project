@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.5.28)  10 APR 2014 16:46
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.5)  10 APR 2014 21:40
 entering extended mode
  %&-line parsing enabled.
-**g03_report.tex
+**g03_report
 (./g03_report.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -230,12 +230,12 @@ File: output_r.png Graphic file (type png)
 (./g03_report.bbl) [9 <./output_r.png (PNG copy)>] (./g03_report.aux) ) 
 Here is how much of TeX's memory you used:
  1881 strings out of 495061
- 24532 string characters out of 1182621
+ 24532 string characters out of 1182622
  77783 words of memory out of 3000000
  5050 multiletter control sequences out of 15000+50000
  21764 words of font info for 46 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 25i,6n,23p,648b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,6n,23p,644b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/sh
 are/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/co
