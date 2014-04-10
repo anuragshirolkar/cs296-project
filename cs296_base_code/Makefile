@@ -15,6 +15,8 @@ TARGET=cs296_03_exe
 TARGET_LIB=cs296_03_exelib
 SH_LIB=-lCS296test
 
+#installation folder
+INSTALL=../install
 
 #paths
 PROJECT_ROOT:=$(CURDIR)
@@ -72,10 +74,10 @@ TEX = g03_report
 
 ######################################
 
-.PHONY: all setup clean distclean report doc data plot debug_prof release_prof setup_r setup_d cleandat distclean1
+.PHONY: all setup clean distclean report doc install dist
 
-all:setup $(OBJS) exe 
-setup: distclean1
+all:setup $(OBJS) exe report doc 
+setup:
 	@mkdir -p myobjs
 	@mkdir -p mylibs
 	@mkdir -p mybins 
@@ -93,70 +95,12 @@ setup: distclean1
 	$(ECHO) "Setup Done." ;\
 	fi;
 
-setup_r: distclean1
-	@mkdir -p myobjs
-	@mkdir -p mylibs
-	@mkdir -p mybins 
-	@ if [ ! -f "$(INCLUDE)/Box2D/Box2D.h" ] || [ ! -f "$(EXT_LIB)/libBox2D.a" ] || [ ! -e "$(EXT_SRC)/Box2D" ] ; then \
-	cd external;\
-	cd src;\
-	tar xvzf Box2D.tgz;\
-	cd Box2D;\
-	mkdir -p buildcs296;\
-	cd buildcs296;\
-	echo "Done";\
-	cmake -DCMAKE_BUILD_TYPE=Release ../;\
-	make;\
-	make install;\
-	$(ECHO) "Setup Done." ;\
-	fi;
-
-setup_d: distclean1
-	@mkdir -p myobjs
-	@mkdir -p mylibs
-	@mkdir -p mybins 
-	@ if [ ! -f "$(INCLUDE)/Box2D/Box2D.h" ] || [ ! -f "$(EXT_LIB)/libBox2D.a" ] || [ ! -e "$(EXT_SRC)/Box2D" ] ; then \
-	cd external;\
-	cd src;\
-	tar xvzf Box2D.tgz;\
-	cd Box2D;\
-	mkdir -p buildcs296;\
-	cd buildcs296;\
-	echo "Done";\
-	cmake -DCMAKE_BUILD_TYPE=Debug ../;\
-	make;\
-	make install;\
-	$(ECHO) "Setup Done." ;\
-	fi;
-
 
 -include $(OBJS:.o=.d)
 
 $(OBJS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	@$(PRINTF) "$(MESG_COLOR)Compiling: $(NO_COLOR) $(FILE_COLOR) %25s$(NO_COLOR)" "$(notdir $<)"
 	@$(CC) -O3 $(CPPFLAGS) -c $< -o $@ -MD 2> temp.log || touch temp.err
-	@if test -e temp.err; \
-	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
-	elif test -s temp.log; \
-	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
-	else printf "${OK_COLOR}%30s\n${NO_COLOR}" "[OK]"; \
-	fi;
-	@$(RM) -f temp.log temp.err
-
-$(OBJS_R): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
-	@$(PRINTF) "$(MESG_COLOR)Compiling: $(NO_COLOR) $(FILE_COLOR) %25s$(NO_COLOR)" "$(notdir $<)"
-	@$(CC) -O3 $(CPPFLAGS) -c $< -o $@ -MD 2> temp.log || touch temp.err
-	@if test -e temp.err; \
-	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
-	elif test -s temp.log; \
-	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
-	else printf "${OK_COLOR}%30s\n${NO_COLOR}" "[OK]"; \
-	fi;
-	@$(RM) -f temp.log temp.err
-
-$(OBJS_D): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
-	@$(PRINTF) "$(MESG_COLOR)Compiling: $(NO_COLOR) $(FILE_COLOR) %25s$(NO_COLOR)" "$(notdir $<)"
-	@$(CC) $(CPPFLAGS) -c $< -o $@ -MD 2> temp.log || touch temp.err
 	@if test -e temp.err; \
 	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
 	elif test -s temp.log; \
@@ -178,96 +122,50 @@ exe: setup $(OBJS)
 	fi;
 	@$(RM) -f temp.log temp.err
 
-exe_r: 
-	@$(PRINTF) "$(MESG_COLOR)Building executable:$(NO_COLOR) $(FILE_COLOR) %16s$(NO_COLOR)" "$(notdir $(BINDIR)/$(TARGET))"
-	@$(CC)  -O3 -o $(BINDIR)/$(TARGET) $(LDFLAGS) $(OBJS) $(LIBS) 2> temp.log || touch temp.err
-	@if test -e temp.err; \
-	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
-	elif test -s temp.log; \
-	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
-	else $(PRINTF) $(OK_FMT) $(OK_STRING); \
-	fi;
-	@$(RM) -f temp.log temp.err
-exe_d:
-	@$(PRINTF) "$(MESG_COLOR)Building executable:$(NO_COLOR) $(FILE_COLOR) %16s$(NO_COLOR)" "$(notdir $(BINDIR)/$(TARGET))"
-	@$(CC) -o $(BINDIR)/$(TARGET) $(LDFLAGS) $(OBJS) $(LIBS) 2> temp.log || touch temp.err
-	@if test -e temp.err; \
-	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
-	elif test -s temp.log; \
-	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
-	else $(PRINTF) $(OK_FMT) $(OK_STRING); \
-	fi;
-	@$(RM) -f temp.log temp.err
-exelib: setup $(OBJS)
-	@$(PRINTF) "$(MESG_COLOR)Building executable using mylibs:$(NO_COLOR) $(FILE_COLOR) %16s$(NO_COLOR)" "$(notdir $(BINDIR)/$(TARGET_LIB))"
-ifeq ($(SHARED_LIB),FALSE)
-	@make -s static
-else 
-	@make -s dynamic
-endif
-
-ifeq ($(SHARED_LIB),FALSE)
-	@g++ -o $(BINDIR)/$(TARGET_LIB) $(LDFLAGS) $(OBJDIR)/main.o $(LIBDIR)/libCS296test.a $(LIBS) 2> temp.log || touch temp.err
-else 
-	@g++ -o $(BINDIR)/$(TARGET_LIB) $(LDFLAGS) $(OBJDIR)/main.o $(LIBDIR)/libCS296test.so $(LIBS) 2> temp.log || touch temp.err
-endif
-	@if test -e temp.err; \
-	then $(PRINTF) $(ERR_FMT) $(ERR_STRING) && $(CAT) temp.log; \
-	elif test -s temp.log; \
-	then $(PRINTF) $(WARN_FMT) $(WARN_STRING) && $(CAT) temp.log; \
-	else $(PRINTF) $(OK_FMT) $(OK_STRING); \
-	fi;
-	@$(RM) -f temp.log temp.err
-
-static: 
-	@ar -cq $(LIBDIR)/libCS296test.a $(OBJDIR)/*[!main].o;\
-	
-dynamic:
-	@$(CC) -shared -Wall $(CPPFLAGS) -o $(LIBDIR)/libCS296test.so -fPIC  $(SRCDIR)/*[!main].cpp;
 
 clean:
 	@$(ECHO) -n "Cleaning up..."
-	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ my* $(DOCDIR)/html $(REPORT).aux  $(REPORT).pdf $(REPORT).bbl $(REPORT).blg $(REPORT).dvi $(REPORT).log $(REPORT).toc
+	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ my* $(DOCDIR)/*.html $(DOCDIR)/html $(REPORT).aux  $(REPORT).pdf $(REPORT).bbl $(REPORT).blg $(REPORT).dvi $(REPORT).log $(REPORT).toc
 	@$(ECHO) "Done"
 
 
 distclean:clean
 	@$(RM) -rf $(EXT_LIB)/* $(INCLUDE)/* $(EXT_SRC)/Box2D
 
+install: setup exe doc report
+	@mkdir -p $(INSTALL)
+	@echo "installing..."
+	@cp -r mybins/cs296_03_exe $(INSTALL)
+	@cp -r doc $(INSTALL)
+	@cp -r scripts $(INSTALL)
+
+
 report:
+	@echo -n "Generating Report..."
 	@cd $(DOCDIR);\
-	pdflatex g03_report;
+	pdflatex g03_report >/dev/null;\
+	bibtex g03_report >/dev/null;\
+	pdflatex g03_report >/dev/null;\
+	pdflatex g03_report >/dev/null;\
+	pdflatex g03_report >/dev/null
 	@python3 scripts/g03_gen_html.py
-	
+	@echo "done"
+
+dist: distclean
+	@tar -cvzf ../../cs296_g03_project.tar.gz .. ../../README
+
 
 doc:
 	@$(ECHO) -n "Generating Doxygen Documentation ...  "
 	@$(RM) -rf doc/html
 	@$(DOXYGEN) $(DOCDIR)/Doxyfile 2 > /dev/null
 	@$(ECHO) "Done"
-data:all
-	@mkdir -p data
-	@if [ ! -f "mybins/cs296_03_exe" ] ; \
-		then make exe;\
-	fi;
-	@$(ECHO) "Generating csv files..."
-	@python3 scripts/g03_gen_csv.py
-	
-	
-
-plot:   data
-	@mkdir -p plots
-	@$(ECHO) "Generating plots..."
-	@python3 scripts/g03_gen_plots.py
-
-debug_prof: setup_d $(OBJS_D) exe_d
-	@perf record -o g03_debug_prof.dat -g -- mybins/cs296_03_exe 100
-	@perf script -i g03_debug_prof.dat| python3.3 gprof2dot.py -f perf | dot -Tpng -o output_d.png
-	@#mv perf.data g03_debug_prof.dat 
 
 
-release_prof: setup_r $(OBJS_R) exe_r
-	@perf record -g -- mybins/cs296_03_exe 100
-	@perf script | python3 gprof2dot.py -f perf | dot -Tpng -o output_r.png
-	@mv perf.data g03_release_prof.dat
-	
+#data:all
+#	@mkdir -p data
+#	@if [ ! -f "mybins/cs296_03_exe" ] ; \
+#		then make exe;\
+#	fi;
+#	@$(ECHO) "Generating csv files..."
+#	@python3 scripts/g03_gen_csv.py
