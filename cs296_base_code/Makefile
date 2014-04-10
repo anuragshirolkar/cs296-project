@@ -227,16 +227,11 @@ dynamic:
 
 clean:
 	@$(ECHO) -n "Cleaning up..."
-	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ my* $(DOCDIR)/html $(REPORT).aux  $(REPORT).pdf $(REPORT).bbl $(REPORT).blg $(REPORT).dvi $(REPORT).log  $(DAT) 
+	@$(RM) -rf $(OBJDIR) *~ $(DEPS) $(SRCDIR)/*~ my* $(DOCDIR)/html $(REPORT).aux  $(REPORT).pdf $(REPORT).bbl $(REPORT).blg $(REPORT).dvi $(REPORT).log $(REPORT).toc
 	@$(ECHO) "Done"
 
-cleandat:
-	@rm *.dat
 
-distclean:clean cleandat
-	@$(RM) -rf $(EXT_LIB)/* $(INCLUDE)/* $(EXT_SRC)/Box2D
-
-distclean1:clean
+distclean:clean
 	@$(RM) -rf $(EXT_LIB)/* $(INCLUDE)/* $(EXT_SRC)/Box2D
 
 report:
